@@ -1,0 +1,13 @@
+export { default as Header } from "./Header";
+export { default as Footer } from "./Footer";
+export { default as Home } from "./Home";
+export { default as About } from "./About";
+export { default as Contact } from "./Contact";
+export { default as Login } from "./Login";
+export { default as Register } from "./Register";
+export { default as TermsOfService } from "./TermsOfService";
+export { default as MyPantry } from "./MyPantry";
+export { default as ShoppingList } from "./ShoppingList";
+export { default as SavedRecipes } from "./SavedRecipes";
+export { default as SearchRecipes } from "./SearchRecipes";
+export { default as Profile } from "./Profile";

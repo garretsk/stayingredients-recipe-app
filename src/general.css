@@ -1,0 +1,79 @@
+.sig-heading {
+  margin-top: 150px;
+}
+
+.sig-saved-recipe {
+  outline: none !important;
+  border-radius: 6px;
+  border-color: grey;
+  border-width: 1px;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.sig-selected {
+  outline: none !important;
+  border-radius: 6px;
+  border-color: blue;
+  border-width: 2px;
+  margin-left: 1px;
+  margin-right: 1px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+
+.sig-unselected {
+  outline: none !important;
+  border-radius: 6px;
+  border-color: grey;
+  border-width: 1px;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.sig-page-bottom {
+  margin-bottom: 50px;
+}
+
+.sig-disabled-btn {
+  color: white !important;
+  background-color: #d3d3d3 !important;
+  border-color: #d3d3d3 !important;
+  outline: none !important;
+}
+
+.sig-disabled-btn:hover {
+  color: white !important;
+  background-color: #d3d3d3 !important;
+  border-color: #d3d3d3 !important;
+}
+
+.sig-disabled-btn:active {
+  color: white !important;
+  background-color: #d3d3d3 !important;
+  border-color: #d3d3d3 !important;
+}
+
+.sig-disabled-btn:focus {
+  color: white;
+  background-color: #d3d3d3;
+  border-color: #d3d3d3;
+  outline: none !important;
+}
+
+.card-body {
+  background-color: white;
+}

@@ -1,0 +1,133 @@
+@font-face {
+  font-family: 'PlusJakartaSans-Regular';
+  src: url('./fonts/PlusJakartaSans-Regular.ttf') format('truetype');
+}
+
+.homeCard {
+  margin-top: 9%;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 90vh;
+}
+
+.homeBody {
+  display: block;
+}
+
+.titleImage {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  display: block;
+}
+
+.textAlign {
+  font-size: 1.5vw;
+  text-align: center;
+  color: #a6a19d;
+  --animate-delay: 0.25s;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 1vw solid transparent;
+  border-right: 1vw solid transparent;
+  border-top: 1vw solid #c9c2be;
+  margin: 10% auto;
+}
+
+h1 {
+  font-size: 3vw;
+  color: #3a4445;
+}
+
+.active.fadeInLeft {
+  animation: fadeInLeft 1s;
+}
+.active.fadeInRight {
+  animation: fadeInRight 1s;
+}
+
+.active.jackInTheBox {
+  animation: jackInTheBox 1s;
+  animation-delay: 1s;
+}
+
+.section {
+  margin: 10vw;
+  height: 80vh;
+  text-align: center;
+  background-color: #e3dbd4;
+  border-radius: 10px;
+  padding: 0px 10%;
+}
+
+.subheading {
+  font-size: 2vw;
+}
+
+.sectionContainer {
+  font-family: 'PlusJakartaSans-Regular';
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-items: stretch;
+  align-items: stretch;
+  margin-top: 3vw;
+  font-size: 1.5vw;
+}
+
+.sectionImg {
+  width: 50%;
+  max-width: 300px;
+  max-height: 300px;
+  --animate-delay: 0.5s;
+}
+
+.imgLeft {
+  margin-left: 15vw;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .titles-animation {
+    animation: fadeInLeft;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+}
+
+@media screen and (max-width: 764px) {
+  .homeCard {
+    margin-top: 15%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .sectionContainer {
+    grid-template-columns: 1fr;
+    font-size: 12px;
+  }
+  .sectionImg {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+  }
+  h1 {
+    font-size: 5vw;
+    text-align: center;
+  }
+
+  .textAlign {
+    font-size: 14px;
+  }
+}
+
+.hide{
+  display: none;
+}

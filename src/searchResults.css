@@ -1,0 +1,363 @@
+﻿@font-face {
+  font-family: 'PlusJakartaSans-Regular';
+  src: url('./fonts/PlusJakartaSans-Regular.ttf') format('truetype');
+}
+
+/******************************************************************************
+                                     PAGE
+******************************************************************************/
+.pageDisplay {
+  font-family: 'PlusJakartaSans-Regular';
+}
+.gridDisplay {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  transition: 1s;
+}
+
+/******************************************************************************
+                                  SEARCH FORM
+******************************************************************************/
+.card {
+  /*appearance*/
+  background-color: #fbf3ec;
+  box-shadow: 0 3px 10px rgb(211,211,211);
+  /*alignment*/
+  margin-bottom: 2%;
+}
+
+.card-body {
+  /*font styling*/
+  font-size: 12px;
+  color: #3b4445;
+  /*alignment*/
+  display: inline;
+}
+
+.form-control {
+  /*appearance*/
+  background-color: #fbf3ec;
+  border: 1px solid #405b54;
+  color: #405b54;
+}
+
+.sliders {
+  width: 80%;
+  margin: 0px 20%;
+  text-align: center;
+}
+
+.subToggle {
+  margin: 0px 1%;
+}
+
+.btn-outline {
+  /*appearance*/
+  border: 1px solid #548c7a;
+  color: #548c7a;
+}
+
+.btn-outline:hover {
+  /*appearance*/
+  background-color: #548c7a;
+  color: white;
+}
+
+.hide {
+  display: none
+}
+
+.hideForm {
+  /*alignment*/
+  margin: -10% 0px;
+  transition: 0.4s;
+}
+
+.filterInline {
+  /*alignment*/
+  display:inline;
+  margin-top: 5px;
+  margin-left: 15%;
+}
+
+.smallSearch {
+  /*appearance*/
+  width: 100%;
+}
+
+.smallForm {
+  /*alignment*/
+  margin-top: -10px;
+  position: relative;
+}
+
+.smallFilters {
+  margin-left: 10%;
+  margin-top: 30px;
+}
+
+.smallSliders {
+  width: 80%;
+  text-align: center;
+}
+
+.smallResults{
+  text-align: center;
+  width: 15%;
+  margin-left: 5%;
+}
+
+/******************************************************************************
+                                  RESULTS
+******************************************************************************/
+.container {
+  z-index: 1;
+}
+
+.resultContainer {
+  /*alignment*/
+  margin: auto;
+  z-index: 0;
+  /*appearance*/
+  width: 80%;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgb(190,190,190);
+  transition: 1s;
+}
+.gridContainer {
+  display: grid;
+  grid-template-rows: 0.25fr 1fr;
+  grid-template-columns: 0.25fr 1fr;
+}
+.resultContainer img {
+  /*alignment*/
+  transition: 0.4s;
+  margin: 10px;
+  /*appearance*/
+  width: 80%;
+  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  /*grid alignment*/
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-end: 3;
+  grid-column-end: 2;
+}
+
+.resultContainer:hover {
+  -webkit-filter: brightness(90%);
+  transition: 0.3s;
+}
+
+.recipeTitle {
+  /*Font styling*/
+  font-size: 1.2vw;
+  color: #3a4445;
+  /*lining and position*/
+  padding-top: 1%;
+  padding-bottom: 1%;
+  /*grid alignment*/
+  grid-row-start: 1;
+  grid-column-start: 2;
+  grid-row-end: 2;
+  grid-column-end: 3;
+}
+
+.tags {
+  display: inline-block;
+  margin-bottom: .2vw;
+  /*grid alignment*/
+  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-row-end: 3;
+  grid-column-end: 3;
+}
+.tagText {
+  /*appearance*/
+  border-radius: 15px;
+  /*font styling*/
+  font-size: .65vw;
+  color: white;
+  /*alignment*/
+  display: inline;
+  margin-left: .5vw;
+  padding: .2vw .5vw;
+}
+
+.dishTypes {
+  background-color: #548c7a;
+}
+.diets {
+  background-color: #545b8c;
+}
+.cuisines {
+  background-color: #8c6454;
+}
+
+hr {
+  background-color: #3b4445;
+  width: 80%;
+  margin: 0px 10%;
+  margin-bottom: 1px;
+  text-align: center;
+}
+
+/******************************************************************************
+                                 RECIPE DETAILS
+******************************************************************************/
+.recipeWindow {
+  /*lining*/
+  margin: auto;
+  /*appearance*/
+  width: 80%;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgb(190,190,190);
+}
+
+.recipeBorder {
+  background-color: #D0D0D0;
+  text-align: left;
+  width: 100%;
+  display: inline-block;
+}
+
+.recipeDetailsTitle {
+  /*Font styling*/
+  font-size: 1.2vw;
+  color: #3a4445;
+  /*lining and position*/
+  padding-top: 1%;
+  padding-left: 2%;
+  position: absolute;
+  background-color: #548c7a;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  z-index: -1;
+}
+
+.heading {
+  font-size: 1vw;
+}
+
+.info {
+  font-size: 0.85vw;
+  padding-left: 4%;
+  list-style-type: none;
+}
+
+.recipe {
+  padding: 25px;
+}
+
+.detailedPic {
+  float: right;
+  max-height: 400px;
+  max-width: 400px;
+  height: 45%;
+  width: 45%;
+  padding-left: 30px;
+  padding-top: 50px;
+  border-radius: 5px;
+}
+.none {
+  overflow-y: scroll;
+  display: block;
+  height: 0px;
+  position: absolute;
+  background-color: #F2F2F2;
+}
+
+.closebtn {
+  padding-top: 1%;
+  width: 4%;
+  background-color: #548c7a;
+  color: #3a4445;
+  font-size: 1.2vw;
+  float: right;
+  border-top-right-radius: 5px;
+}
+
+.closebtn:hover {
+  color: white;
+}
+
+.highlight:hover {
+  text-decoration: underline;
+}
+
+/******************************************************************************
+                                SCREEN ADJUSTMENTS
+******************************************************************************/
+@media screen and (max-width: 1000px) {
+  .gridContainer {
+    display: grid;
+    grid-template-rows: 0.5fr 1fr;
+    grid-template-columns: 0.5fr 1fr;
+  }
+
+  .recipeTitle {
+    font-size: 11px;
+  }
+
+  .recipeDetailsTitle {
+    font-size: 14px;
+    padding-right: 65%;
+  }
+
+  .tags {
+    margin-bottom: 1px;
+  }
+  .tagText {
+    font-size: 9px;
+    padding: 1px 1vw;
+  }
+
+  .heading {
+    font-size: 14px;
+    margin-top: 5vw;
+  }
+
+  .info {
+    font-size: 11px;
+  }
+
+  .detailedPic {
+    height: 100%;
+    width: 100%;
+    float: none;
+    padding-left: 0px;
+  }
+
+  .gridDisplay {
+    grid-template-columns: 1fr;
+  }
+
+  .gridDisplay > * {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+
+  .closebtn {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .smallSliders {
+    width: 90%;
+  }
+
+  .smallResults {
+    text-align: center;
+    width: 15%;
+    margin-left: 10%;
+  }
+}
+
+.resultContainer {
+  --animate-delay: 0.2s;
+}
+

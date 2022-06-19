@@ -1,0 +1,38 @@
+nav li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  position: relative; 
+}
+
+nav ul a {
+  color: #444;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+nav ul a:hover{
+  color: #000;
+}
+
+nav ul a::before{
+  content:'';
+  display: block;
+  height: 5px;
+
+  background-color: #444;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 200ms;
+}
+@media (min-width: 768) {
+  nav ul a:hover::before{
+    width: 100%;
+  }
+}

@@ -1,0 +1,196 @@
+/*Terms of Service Pop Up*/
+
+.sig-terms-pop-up-bg {
+  position: fixed;
+  background: #00000050;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.sig-terms-pop-up {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+  height: auto;
+  max-height: 60vh;
+  margin-top: calc(100vh - 70vh - 20px);
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  border: 1px solid #999;
+  overflow: auto;
+}
+
+.sig-close-terms-pop-up {
+  content: 'x';
+  cursor: pointer;
+  position: fixed;
+  right: calc(15% - 12px);
+  top: calc(100vh - 70vh - 32px);
+  background: #ededed;
+  color: black;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid #999;
+  font-size: 20px;
+}
+
+/*Speech Input Pop Up*/
+
+.sig-speech-pop-up-bg {
+  position: fixed;
+  background: #00000080;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.sig-speech-pop-up-outside {
+  position: relative;
+  background: #00000000;
+  width: 100%;
+  height: 40vh;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+}
+
+.sig-speech-pop-up {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  height: 60vh;
+  margin-top: 0vh;
+  background: rgb(30, 30, 30);
+  color: white;
+  border-radius: 4px;
+  padding: 20px;
+  border: 1px solid rgb(44, 44, 44);
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sig-close-speech-pop-up {
+  content: 'x';
+  cursor: pointer;
+  position: fixed;
+  right: calc(0% - 0px);
+  top: calc(40vh - 12px);
+  background: #ededed;
+  color: black;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid #999;
+  font-size: 20px;
+}
+
+/*Contact Form Sent Pop Up*/
+
+.sig-message-pop-up-bg {
+  position: fixed;
+  background: #00000000;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.sig-message-pop-up {
+  position: relative;
+  width: 44%;
+  margin: 0 auto;
+  height: auto;
+  max-height: 60vh;
+  min-height: 15vh;
+  margin-top: 40vh;
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  border: 4px double #999;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sig-close-message-pop-up {
+  content: 'x';
+  cursor: pointer;
+  position: fixed;
+  right: calc(28% - 10px);
+  top: calc(40vh - 12px);
+  background: #ededed;
+  color: black;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid #999;
+  font-size: 20px;
+}
+
+/*Social Media Share Pop Up*/
+
+.sig-social-media-share-pop-up-bg {
+  position: fixed;
+  background: #00000080;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.sig-social-media-share-pop-up-outside {
+  position: relative;
+  background: #00000000;
+  width: 100%;
+  height: 60vh;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+}
+
+.sig-social-media-share-pop-up {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  height: 40vh;
+  margin-top: 0vh;
+  background: #e0ddd6;
+  border-radius: 4px;
+  padding: 20px;
+  border: 1px solid black;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sig-close-social-media-share-pop-up {
+  content: 'x';
+  cursor: pointer;
+  position: fixed;
+  right: calc(0% - 0px);
+  top: calc(60vh - 12px);
+  background: black;
+  color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid #999;
+  font-size: 20px;
+}
