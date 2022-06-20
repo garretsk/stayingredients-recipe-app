@@ -127,6 +127,7 @@ router.post("/login", (req, res) => {
         );
       }
       else {
+        res.setHeader('Access-Control-Allow-Headers', 'Authorization');
         return res
           .status(400)
           .json({ PasswordIncorrect: "Password incorrect" });
