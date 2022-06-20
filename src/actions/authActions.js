@@ -11,7 +11,7 @@ import {
 // Register User
 export const registerUser = (userData, history) => dispatch => {
   axios
-    .post("https://stayingredients-recipe-app-backend.vercel.app/api/users/register", userData)
+    .post("https://stayingredients-recipe-app.vercel.app/api/users/register", userData)
     .then(res => history.push("/login")) // re-direct to login on successful register
     .catch(err =>
       dispatch({
@@ -24,7 +24,7 @@ export const registerUser = (userData, history) => dispatch => {
 
 export const addPantry = userData => dispatch => {
   axios
-    .post("https://stayingredients-recipe-app-backend.vercel.app/api/users/addPantry", userData)
+    .post("https://stayingredients-recipe-app.vercel.app/api/users/addPantry", userData)
     .then(res => {})
     .catch(err =>
       dispatch({
@@ -36,7 +36,7 @@ export const addPantry = userData => dispatch => {
 
 export const getPantry = userData => dispatch => {
   axios
-    .get("https://stayingredients-recipe-app-backend.vercel.app/api/users/getPantry", userData)
+    .get("https://stayingredients-recipe-app.vercel.app/api/users/getPantry", userData)
     .then(res => {})
     .catch(err =>
       dispatch({
@@ -72,7 +72,7 @@ export const loginUser = userData => dispatch => {
 
 export const updatePantry = pantryData => dispatch => {
   axios
-    .post("https://stayingredients-recipe-app-backend.vercel.app/api/users/pantry", pantryData)
+    .post("https://stayingredients-recipe-app.vercel.app/api/users/pantry", pantryData)
     .catch(err =>
       dispatch({
         type: GET_ERRORS,

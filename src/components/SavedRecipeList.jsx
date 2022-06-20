@@ -23,7 +23,7 @@ export default class SavedRecipeList extends Component {
   }
 
   removeFromSavedRecipes(name, image) {
-    let path = "https://stayingredients-recipe-app-backend.vercel.app/api/users/removeSavedRecipe";
+    let path = "https://stayingredients-recipe-app.vercel.app/api/users/removeSavedRecipe";
     console.log("removeFromSavedRecipes");
 
     let tempSelectedRecipe = {name: name, image: image};
@@ -50,7 +50,7 @@ export default class SavedRecipeList extends Component {
   }
 
   addToSavedRecipes(name, image) {
-    let path = "https://stayingredients-recipe-app-backend.vercel.app/api/users/addSavedRecipe";
+    let path = "https://stayingredients-recipe-app.vercel.app/api/users/addSavedRecipe";
     console.log("addToSavedRecipes");
     console.log("--->>>");
     console.log(name);
@@ -87,7 +87,7 @@ export default class SavedRecipeList extends Component {
     const name = decoded.uname;
     console.log("getting saved recipes");
 
-    fetch("https://stayingredients-recipe-app-backend.vercel.app/api/users/getSavedRecipes/" + name)
+    fetch("https://stayingredients-recipe-app.vercel.app/api/users/getSavedRecipes/" + name)
       .then(response => response.json())
       .then((res) => {
         console.log("SAVED_RECIPES: " + res.userSavedRecipes);
