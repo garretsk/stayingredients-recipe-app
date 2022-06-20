@@ -328,8 +328,6 @@ router.post("/addSavedRecipe", (req, res) => {
     SavedRecipes.updateOne(query, dataAdd, (err, collection) => {
       if(err) throw err;
       console.log("Record updated successfully");
-    })
-    .then(() => {
       res.json(true);
     });
   });
@@ -359,8 +357,6 @@ router.post("/removeSavedRecipe", (req, res) => {
   SavedRecipes.updateOne(query, data, (err, collection) => {
     if(err) throw err;
     console.log("Record updated successfully");
-  })
-  .then(() => {
     res.json(true);
   });
 });

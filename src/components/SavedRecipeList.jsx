@@ -45,8 +45,6 @@ export default class SavedRecipeList extends Component {
           } else {
             console.log("Couldn't remove from saved recipes");
           }
-
-          this.retrieveSavedRecipes();
         })
     });
   }
@@ -79,8 +77,6 @@ export default class SavedRecipeList extends Component {
           } else {
             console.log("Couldn't add to saved recipes");
           }
-
-          this.retrieveSavedRecipes();
         })
     });
   }
@@ -96,7 +92,7 @@ export default class SavedRecipeList extends Component {
       .then((res) => {
         console.log("SAVED_RECIPES: " + res.userSavedRecipes);
         
-        let tempSavedRecipes = this.state.savedRecipes;
+        let tempSavedRecipes = [];
         for (let i = 0; i < res.userSavedRecipes.length; ++i) {
           console.log("SAVED_RECIPES: " + res.userSavedRecipes[i].name);
           console.log("SAVED_RECIPES: " + res.userSavedRecipes[i].image);
