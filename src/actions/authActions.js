@@ -49,7 +49,7 @@ export const getPantry = userData => dispatch => {
 // Login - get user token
 export const loginUser = userData => dispatch => {
   axios
-    .post("https://stayingredients-recipe-app-backend.vercel.app/routes/api/users/login", userData)
+    .post("https://stayingredients-recipe-app.vercel.app/api/users/login", userData)
     .then(res => {
       // Save to localStorage
       // Set token to localStorage
