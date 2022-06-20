@@ -103,7 +103,7 @@ export default class ShoppingList extends Component {
   }
 
   addToShoppingList() {
-    let path = "http://localhost:5000/api/users/addShoppingList";
+    let path = "https://stayingredients-recipe-app-backend.vercel.app/api/users/addShoppingList";
     let tempSelectedIngredients = [];
     let tempSearchResultListIngredients = [];
     let newIndex = 0;
@@ -174,7 +174,7 @@ export default class ShoppingList extends Component {
     const name = decoded.uname;
     console.log("getting shopping list");
 
-    fetch("http://localhost:5000/api/users/getShoppingList/" + name)
+    fetch("https://stayingredients-recipe-app-backend.vercel.app/api/users/getShoppingList/" + name)
       .then(response => response.json())
       .then((res) => {
         console.log("SHOPPING LIST: " + res.userShoppingList);
@@ -197,8 +197,8 @@ export default class ShoppingList extends Component {
   }
 
   markAsGot() {
-    let addMPPath = "http://localhost:5000/api/users/addPantry";
-    let removeSLPath = "http://localhost:5000/api/users/removeShoppingList";
+    let addMPPath = "https://stayingredients-recipe-app-backend.vercel.app/api/users/addPantry";
+    let removeSLPath = "https://stayingredients-recipe-app-backend.vercel.app/api/users/removeShoppingList";
     let tempSelectedIngredients = [];
     for(let i = 0; i < this.state.shoppingListIngredients.length; ++i) {
       if(this.state.shoppingListIngredients[i].isSelected) {
@@ -252,7 +252,7 @@ export default class ShoppingList extends Component {
   }
 
   removeFromShoppingList() {
-    let removeSLPath = "http://localhost:5000/api/users/removeShoppingList";
+    let removeSLPath = "https://stayingredients-recipe-app-backend.vercel.app/api/users/removeShoppingList";
     let tempSelectedIngredients = [];
     for(let i = 0; i < this.state.shoppingListIngredients.length; ++i) {
       if(this.state.shoppingListIngredients[i].isSelected) {

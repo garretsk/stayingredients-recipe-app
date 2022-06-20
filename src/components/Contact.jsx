@@ -51,7 +51,7 @@ class Contact extends Component {
   submitEmail = async (e) => {
     e.preventDefault();
     let port = process.env.PORT || 5000;
-    let path = "http://localhost:" + port.toString() + "/contact";
+    let path = "https://stayingredients-recipe-app-backend.vercel.app" + "/contact";
     await fetch(path, {
       method: "POST",
       headers: {

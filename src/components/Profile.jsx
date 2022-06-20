@@ -45,7 +45,7 @@ class Profile extends Component {
     console.log(decoded);
     console.log(name);
 
-    fetch("http://localhost:5000/api/users/getUserInfo/" + name)
+    fetch("https://stayingredients-recipe-app-backend.vercel.app/api/users/getUserInfo/" + name)
       .then(response => response.json())
       .then((res) => {
         console.log("USER_INFO: " + res);

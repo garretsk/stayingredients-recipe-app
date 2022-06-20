@@ -23,7 +23,7 @@ function SearchRecipes() {
     const name = decoded.uname;
     console.log("getting pantry");
 
-    fetch("http://localhost:5000/api/users/getPantry/" + name)
+    fetch("https://stayingredients-recipe-app-backend.vercel.app/api/users/getPantry/" + name)
       .then(response => response.json())
       .then((res) => {
         console.log("PANTRY: " + res.userPantry);
@@ -114,7 +114,7 @@ function SearchRecipes() {
     const decoded = jwt_decode(token);
     const uname = decoded.uname;
 
-    let path = "http://localhost:5000/api/users/addSavedRecipe";
+    let path = "https://stayingredients-recipe-app-backend.vercel.app/api/users/addSavedRecipe";
     console.log("addToSavedRecipes");
     console.log("--->>>");
     console.log(name);
@@ -150,7 +150,7 @@ function SearchRecipes() {
     const decoded = jwt_decode(token);
     const uname = decoded.uname;
 
-    let path = "http://localhost:5000/api/users/removeSavedRecipe";
+    let path = "https://stayingredients-recipe-app-backend.vercel.app/api/users/removeSavedRecipe";
     console.log("removeFromSavedRecipes");
     console.log("--->>>");
     console.log(name);
