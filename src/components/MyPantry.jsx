@@ -103,7 +103,7 @@ export default class MyPantry extends Component {
   }
 
   addToPantry() {
-    let path = "https://stayingredients-recipe-app.vercel.app/users/addPantry";
+    let path = "https://stayingredients-backend.herokuapp.com/users/addPantry";
     let tempSelectedIngredients = [];
     let tempSearchResultListIngredients = [];
     let newIndex = 0;
@@ -174,7 +174,7 @@ export default class MyPantry extends Component {
     const name = decoded.uname;
     console.log("getting pantry");
 
-    fetch("https://stayingredients-recipe-app.vercel.app/api/users/getPantry/" + name)
+    fetch("https://stayingredients-backend.herokuapp.com/api/users/getPantry/" + name)
       .then(response => response.json())
       .then((res) => {
         console.log("PANTRY: " + res.userPantry);
@@ -197,8 +197,8 @@ export default class MyPantry extends Component {
   }
 
   markDepleted() {
-    let addSLPath = "https://stayingredients-recipe-app.vercel.app/api/users/addShoppingList";
-    let removeMPPath = "https://stayingredients-recipe-app.vercel.app/api/users/removePantry";
+    let addSLPath = "https://stayingredients-backend.herokuapp.com/api/users/addShoppingList";
+    let removeMPPath = "https://stayingredients-backend.herokuapp.com/api/users/removePantry";
     let tempSelectedIngredients = [];
     for(let i = 0; i < this.state.myPantryListIngredients.length; ++i) {
       if(this.state.myPantryListIngredients[i].isSelected) {
@@ -252,7 +252,7 @@ export default class MyPantry extends Component {
   }
 
   removeFromPantry() {
-    let removeMPPath = "https://stayingredients-recipe-app.vercel.app/users/removePantry";
+    let removeMPPath = "https://stayingredients-backend.herokuapp.com/users/removePantry";
     let tempSelectedIngredients = [];
     for(let i = 0; i < this.state.myPantryListIngredients.length; ++i) {
       if(this.state.myPantryListIngredients[i].isSelected) {
