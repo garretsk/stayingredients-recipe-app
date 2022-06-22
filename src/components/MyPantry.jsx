@@ -103,7 +103,7 @@ export default class MyPantry extends Component {
   }
 
   addToPantry() {
-    let path = "https://stayingredients-backend.herokuapp.com/users/addPantry";
+    let path = "https://stayingredients-backend.herokuapp.com/api/users/addPantry";
     let tempSelectedIngredients = [];
     let tempSearchResultListIngredients = [];
     let newIndex = 0;
@@ -252,7 +252,7 @@ export default class MyPantry extends Component {
   }
 
   removeFromPantry() {
-    let removeMPPath = "https://stayingredients-backend.herokuapp.com/users/removePantry";
+    let removeMPPath = "https://stayingredients-backend.herokuapp.com/api/users/removePantry";
     let tempSelectedIngredients = [];
     for(let i = 0; i < this.state.myPantryListIngredients.length; ++i) {
       if(this.state.myPantryListIngredients[i].isSelected) {
