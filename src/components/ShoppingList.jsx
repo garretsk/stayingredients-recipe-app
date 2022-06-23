@@ -328,7 +328,7 @@ export default class ShoppingList extends Component {
                         <IngredientList ingredients={this.state.shoppingListIngredients} handleSelect={this.handleShoppingListSelection} actions={myPantryListActions} emptyListMessage="Your shopping list is currently empty"/>
                         <button onClick={this.shareShoppingList} style={{display: "inline", color: "blue"}} className="btn form-inline justify-content-center align-items-center"><i className="fas fa-share fa-2x"></i><h5 style={{display: "inline"}}> Share your shopping list</h5></button>
                         {this.state.showSocialMediaShare &&
-                          <SocialMediaSharePopUp handleClose={this.handleSocialMediaSharePopUpClose} url="https://www.pacificu.edu/about/directory/people/shereen-khoja-phd" quote="WE NEED A DOMAIN NAME" hashtag="#SpendMoreMoney"/>
+                          <SocialMediaSharePopUp handleClose={this.handleSocialMediaSharePopUpClose} url="https://stayingredients-recipe-app.vercel.app/shopping-list" quote="My StayInGredients Shopping List" hashtag="#StayInGredients"/>
                         }
                       </div>
                     </div>

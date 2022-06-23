@@ -12,9 +12,7 @@ function TermsOfService() {
                 <div className="card" styles="border-radius: 15px;">
                   <div className="card-body p-5">
                     <PageTitle>Terms of Service</PageTitle>
-                    <p>
-                      We reserve the right to steal your data and sell it.
-                    </p>
+                    <p>StayInGredients is a web application designed to allow users to track what ingredients they have available in their kitchens and search for recipes they can follow using these ingredients. StayInGredients was developed as part of an undergraduate senior capstone project. Creating an account with and using StayInGredients is free. This web application makes use of the Spoonacular API. However, it is not designed to compete with or drive traffic from any of Spoonacular's websites or apps.</p>
                   </div>
                 </div>
               </div>
