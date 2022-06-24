@@ -41,7 +41,7 @@ class App extends Component {
       if(!responseReceived) {
         window.alert("Heroku server is waking up");
       }
-    }, 1000);
+    }, 2500);
 
     fetch("https://stayingredients-backend.herokuapp.com/wake")
     .then((res) => res.json())
