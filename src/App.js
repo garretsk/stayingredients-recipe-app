@@ -47,6 +47,7 @@ class App extends Component {
     .then((res) => res.json())
     .then((res) => {
       if("server awake" == res.status) {
+        responseReceived = true;
         console.log("Server awake");
       }
       else {
