@@ -36,7 +36,7 @@ class App extends Component {
     fetch("https://stayingredients-backend.herokuapp.com/wake")
     .then((res) => res.json())
     .then((res) => {
-      if("server awake/waking" == res) {
+      if("server awake/waking" == res.status) {
         console.log("Server awake or waking");
       }
       else {
