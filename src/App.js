@@ -33,6 +33,8 @@ if (localStorage.jwtToken) {
 class App extends Component {
 
   componentDidMount() {
+
+    // Send GET request to Heroku server to make sure it is awake
     fetch("https://stayingredients-backend.herokuapp.com/wake")
     .then((res) => res.json())
     .then((res) => {
