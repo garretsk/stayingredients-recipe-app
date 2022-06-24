@@ -477,11 +477,11 @@ function getRandomRecipe (e) {
                           </div>
                           <div class="sliders">
                             Max Cook Time
-                            <Slider className="mb-3" aria-label="Max Cook Time" getAriaValueText={valuetext} value={maxCookTime} valueLabelDisplay="off" marks={maxCookTimeMarks} min={0} max={150} onChangeCommitted={maxCookTimeCallback}/>
+                            <Slider className="mb-5" aria-label="Max Cook Time" getAriaValueText={valuetext} value={maxCookTime} valueLabelDisplay="off" marks={maxCookTimeMarks} min={0} max={150} onChangeCommitted={maxCookTimeCallback}/>
                             Min Protein Per Serving
-                            <Slider className="mb-3" aria-label="Min Protein Per Serving" getAriaValueText={valuetext} value={minProtein} valueLabelDisplay="off" marks={minProteinMarks} min={0} max={100} track="inverted" onChangeCommitted={minProteinCallback}/>
+                            <Slider className="mb-5" aria-label="Min Protein Per Serving" getAriaValueText={valuetext} value={minProtein} valueLabelDisplay="off" marks={minProteinMarks} min={0} max={100} track="inverted" onChangeCommitted={minProteinCallback}/>
                             Calories Per Serving
-                            <Slider className="mb-3" aria-label="Calories Per Serving" getAriaValueText={valuetext} valueLabelDisplay="off" value={calories} marks={calorieMarks} onChangeCommitted={caloriesCallback}/>
+                            <Slider className="mb-5" aria-label="Calories Per Serving" getAriaValueText={valuetext} valueLabelDisplay="off" value={calories} marks={calorieMarks} onChangeCommitted={caloriesCallback}/>
                             Max Search Results
                           </div>
                           <ToggleButtonGroup color="primary" value={maxResults} exclusive onChange={maxResultsCallback}>
