@@ -82,7 +82,7 @@ class Profile extends Component {
                 <div className="col-lg-7">
                   <br/><br/><br/>
                   <h3>
-                    <b>Hey there, {name}!</b>
+                    <b>Hello {name}!</b>
                   </h3>
                   <div className="d-flex justify-content-center">
                     <button type="submit" 
