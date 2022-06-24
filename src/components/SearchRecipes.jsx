@@ -478,10 +478,13 @@ function getRandomRecipe (e) {
                           <div class="sliders">
                             Max Cook Time
                             <Slider aria-label="Max Cook Time" getAriaValueText={valuetext} value={maxCookTime} valueLabelDisplay="off" marks={maxCookTimeMarks} min={0} max={150} onChangeCommitted={maxCookTimeCallback}/>
+                            <br/>
                             Min Protein Per Serving
                             <Slider aria-label="Min Protein Per Serving" getAriaValueText={valuetext} value={minProtein} valueLabelDisplay="off" marks={minProteinMarks} min={0} max={100} track="inverted" onChangeCommitted={minProteinCallback}/>
+                            <br/>
                             Calories Per Serving
                             <Slider aria-label="Calories Per Serving" getAriaValueText={valuetext} valueLabelDisplay="off" value={calories} marks={calorieMarks} onChangeCommitted={caloriesCallback}/>
+                            <br/>
                             Max Search Results
                           </div>
                           <ToggleButtonGroup color="primary" value={maxResults} exclusive onChange={maxResultsCallback}>
