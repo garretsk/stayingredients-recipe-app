@@ -23,12 +23,12 @@ export default class IngredientList extends Component {
     let buttonList;
     if(atLeastOneIngredientSelected) {
       buttonList = this.props.actions.map((action) =>
-        <button key={action.id.toString()} className="btn mt-1 mb-1 btn-outline mx-2" onClick={action.action}>{action.label}</button>
+        <button key={action.id.toString()} className="btn btn-outline mx-2 mb-1" onClick={action.action}>{action.label}</button>
       );
     }
     else {
       buttonList = this.props.actions.map((action) =>
-        <div key={action.id.toString()} className="sig-disabled-btn btn btn-primary mx-2">{action.label}</div>
+        <div key={action.id.toString()} className="sig-disabled-btn btn btn-primary mx-2 mb-1">{action.label}</div>
       );
     }
 
