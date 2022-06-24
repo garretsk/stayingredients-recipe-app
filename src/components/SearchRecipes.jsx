@@ -476,13 +476,13 @@ function getRandomRecipe (e) {
                             <ToggleSwitch title ="Show Ingredient Substitutions" callback={strictSearchCallback} checked={strictSearch}></ToggleSwitch>
                           </div>
                           <div class="sliders">
-                            Max Cook Time
+                            <span className="mt-1">Max Cook Time</span>
                             <Slider className="mb-5" aria-label="Max Cook Time" getAriaValueText={valuetext} value={maxCookTime} valueLabelDisplay="off" marks={maxCookTimeMarks} min={0} max={150} onChangeCommitted={maxCookTimeCallback}/>
-                            Min Protein Per Serving
+                            <span className="mt-1">Min Protein Per Serving</span>
                             <Slider className="mb-5" aria-label="Min Protein Per Serving" getAriaValueText={valuetext} value={minProtein} valueLabelDisplay="off" marks={minProteinMarks} min={0} max={100} track="inverted" onChangeCommitted={minProteinCallback}/>
-                            Calories Per Serving
+                            <span className="mt-1">Calories Per Serving</span>
                             <Slider className="mb-5" aria-label="Calories Per Serving" getAriaValueText={valuetext} valueLabelDisplay="off" value={calories} marks={calorieMarks} onChangeCommitted={caloriesCallback}/>
-                            Max Search Results
+                            <span className="mt-1">Max Search Results</span>
                           </div>
                           <ToggleButtonGroup color="primary" value={maxResults} exclusive onChange={maxResultsCallback}>
                             <ToggleButton value="10">10</ToggleButton>
