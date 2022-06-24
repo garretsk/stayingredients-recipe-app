@@ -8,6 +8,7 @@ import { setCurrentUser, logoutUser } from "./actions/authActions";
 
 import { Provider } from "react-redux";
 import store from "./store";
+import { get } from "mongoose";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -30,6 +31,22 @@ if (localStorage.jwtToken) {
 }
 
 class App extends Component {
+
+  componentDidMount() {
+    fetch("https://stayingredients-backend.herokuapp.com/wake")
+    .then((res) => {
+      if("server awake/waking" == res) {
+        console.log("Server awake or waking");
+      }
+      else {
+        console.log("Server error");
+      }
+    })
+    .catch(error => {
+      window.alert(error);
+    });
+  }
+
   render() {
     return (
       <Provider store={store}>
