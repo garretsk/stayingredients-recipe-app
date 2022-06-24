@@ -36,12 +36,14 @@ class App extends Component {
 
     // Send GET request to Heroku server to make sure it is awake
     let responseReceived = false;
+    let alertSent = false;
 
     setTimeout(() => {
       if(!responseReceived) {
-        window.alert("Heroku server is waking up");
+        alertSent = true;
+        window.alert("Our Heroku server is starting. StayInGredients was created as part of an undergraduate capstone. Due to budgetary contraints, we used Vercel to deploy our frontend and 'free dyno hours' from Heroku to deploy our backend. In order to save dyno hours, the dyno sleeps until it receives traffic, which wakes it up. It returns to sleep after a period of inactivity. While our server is starting, you may notice any operations that involve requests to the backend being delayed. Performance will return to normal levels after the server wakes. This process occurs silently within about 15 seconds and requires no action from the user. For more info visit: https://devcenter.heroku.com/articles/free-dyno-hours");
       }
-    }, 2500);
+    }, 3000);
 
     fetch("https://stayingredients-backend.herokuapp.com/wake")
     .then((res) => res.json())
@@ -49,6 +51,9 @@ class App extends Component {
       if("server awake" == res.status) {
         responseReceived = true;
         console.log("Server awake");
+        if(alertSent) {
+          window.alert("Our Heroku server is now up and running!");
+        }
       }
       else {
         console.log(res);
