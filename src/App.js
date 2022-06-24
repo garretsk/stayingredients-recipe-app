@@ -34,6 +34,11 @@ class App extends Component {
 
   componentDidMount() {
 
+    window.alert("one");
+    setTimeout(() => {
+      window.alert("two");
+    }, 1000);
+
     // Send GET request to Heroku server to make sure it is awake
     let responseReceived = false;
     let alertSent = false;
@@ -41,7 +46,7 @@ class App extends Component {
     setTimeout(() => {
       if(!responseReceived) {
         alertSent = true;
-        window.alert("Our Heroku server is starting. StayInGredients was created as part of an undergraduate capstone. Due to budgetary contraints, we used Vercel to deploy our frontend and 'free dyno hours' from Heroku to deploy our backend. In order to save dyno hours, the dyno sleeps until it receives traffic, which wakes it up. It returns to sleep after a period of inactivity. While our server is starting, you may notice any operations that involve requests to the backend being delayed. Performance will return to normal levels after the server wakes. This process occurs silently within about 15 seconds and requires no action from the user. For more info visit: https://devcenter.heroku.com/articles/free-dyno-hours");
+        window.alert("Our Heroku server is starting. StayInGredients was created as part of an undergraduate capstone. Due to budgetary contraints, we used Vercel to deploy our frontend and 'free dyno hours' from Heroku to deploy our backend. In order to save dyno hours, the dyno sleeps until it receives traffic, which wakes it up. It returns to sleep after a period of inactivity. While our server is starting, you may notice any operations that involve requests to the backend being delayed. Performance will return to normal levels after the server wakes.");
       }
     }, 3000);
 
