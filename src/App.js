@@ -34,6 +34,7 @@ class App extends Component {
 
   componentDidMount() {
     fetch("https://stayingredients-backend.herokuapp.com/wake")
+    .then((res) => res.json())
     .then((res) => {
       if("server awake/waking" == res) {
         console.log("Server awake or waking");
