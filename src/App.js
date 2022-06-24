@@ -39,7 +39,7 @@ class App extends Component {
         console.log("Server awake or waking");
       }
       else {
-        console.log("Server error");
+        console.log(res);
       }
     })
     .catch(error => {
