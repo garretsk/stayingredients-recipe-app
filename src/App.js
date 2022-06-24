@@ -35,6 +35,14 @@ class App extends Component {
   componentDidMount() {
 
     // Send GET request to Heroku server to make sure it is awake
+    let responseReceived = false;
+
+    setTimeout(() => {
+      if(!responseReceived) {
+        window.alert("Heroku server is waking up");
+      }
+    }, 1000);
+
     fetch("https://stayingredients-backend.herokuapp.com/wake")
     .then((res) => res.json())
     .then((res) => {
