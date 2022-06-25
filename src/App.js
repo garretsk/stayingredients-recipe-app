@@ -33,7 +33,7 @@ if (localStorage.jwtToken) {
   // }
 }
 
-const HEROKU_SERVER_MESSAGE = "Our Heroku server is starting. StayInGredients was created as part of an undergraduate capstone. Due to budgetary contraints, we used Vercel to deploy our frontend and 'free dyno hours' from Heroku to deploy our backend. In order to save dyno hours, the dyno sleeps until it receives traffic, which wakes it up. It returns to sleep after a period of inactivity. While our server is starting, you may notice any operations that involve requests to the backend being delayed. Performance will return to normal levels after the server wakes.";
+const HEROKU_SERVER_MESSAGE = "Our Heroku server is starting. StayInGredients was created as part of an undergraduate capstone. Due to budgetary contraints, we used Vercel to deploy our frontend and 'free dyno hours' from Heroku to deploy our backend. In order to save dyno hours, the dyno sleeps until it receives traffic, which wakes it up. It returns to sleep after a period of inactivity. While our server is starting, you may notice any operations that involve requests to the backend being delayed. Performance will return to normal levels after the server wakes. More info: https://devcenter.heroku.com/articles/free-dyno-hours";
 const SERVER_AWAKE_MESSAGE = "Our Heroku server is now up and running!";
 
 class App extends Component {
