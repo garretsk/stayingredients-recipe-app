@@ -8,10 +8,12 @@ import { setCurrentUser, logoutUser } from "./actions/authActions";
 import MessagePopUp from "./components/MessagePopUp";
 import PublicPantry from "./components/PublicPantry";
 import PublicShoppingList from "./components/PublicShoppingList";
+import Heroku from "./components/Heroku";
 
 import { Provider } from "react-redux";
 import store from "./store";
 import { get } from "mongoose";
+import Heroku from "./components/Heroku";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -33,7 +35,7 @@ if (localStorage.jwtToken) {
   // }
 }
 
-const HEROKU_SERVER_MESSAGE = <span>Our Heroku server is starting. StayInGredients was created as part of an undergraduate capstone. Due to budgetary contraints, we used Vercel to deploy our frontend and <a href="https://devcenter.heroku.com/articles/free-dyno-hours" target="_blank" rel="noopener noreferrer">'free dyno hours'</a> from Heroku to deploy our backend. In order to save dyno hours, the dyno sleeps until it receives traffic, which wakes it up. It returns to sleep after a period of inactivity. While our server is starting, you may notice any operations that involve requests to the backend being delayed. Performance will return to normal levels after the server wakes.</span>;
+const HEROKU_SERVER_MESSAGE = <span>Our Heroku server is starting. Some features may be delayed until this is done. More info: <a href="https://stayingredients-recipe-app.vercel.app/heroku" target="_blank" rel="noopener noreferrer">https://stayingredients-recipe-app.vercel.app/heroku</a></span>;
 const SERVER_AWAKE_MESSAGE = <span>Our Heroku server is now up and running!</span>;
 
 class App extends Component {
@@ -120,6 +122,7 @@ class App extends Component {
               <PrivateRoute path="/profile" exact component={() => <Profile/>} />
               <Route path="/public-pantry/:username" exact component={() => <PublicPantry/>} />
               <Route path="/public-shopping-list/:username" exact component={() => <PublicShoppingList/>} />
+              <Route path="/heroku" exact component={() => <Heroku/>} />
             </Switch>
             <Footer />
           </Router>
