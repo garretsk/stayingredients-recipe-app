@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import PageTitle from "./PageTitle";
 import IngredientList from "./IngredientList";
-import jwt_decode from "jwt-decode";
-import Expand from "react-expand-animated";
 import { useParams } from "react-router-dom";
 
 class ViewOnlyPantry extends Component {
@@ -10,17 +8,11 @@ class ViewOnlyPantry extends Component {
     super(props);
 
     this.state = {
-      expand: false,
       myPantryListIngredients: [],
     };
 
-    this.expand = this.expand.bind(this);
     this.handleMyPantrySelection = this.handleMyPantrySelection.bind(this);
     this.retrieveMyPantry = this.retrieveMyPantry.bind(this);
-  }
-
-  expand() {
-    this.setState({expand: true});
   }
 
   handleMyPantrySelection(id) {
@@ -59,19 +51,17 @@ class ViewOnlyPantry extends Component {
     let myPantryListActions = [];
 
     return (
-      <Expand open={this.state.expand}>
-        <div className="public-pantry">
-          <div className="container">
-            <div className="mask d-flex align-items-center h-100">
-              <div className="container h-100">
-                <div className="row d-flex justify-content-center align-items-center h-100">
-                  <div className="col-12 col-md-12 col-lg-12 col-xl-12">
-                    <div className="card" styles="border-radius: 15px;">
-                      <div className="card-body p-5">
-                        <PageTitle></PageTitle>
-                        <h1 className="mt-5 font-weight-light text-center">{this.props.username + "'s Pantry:"}</h1>
-                        <IngredientList ingredients={this.state.myPantryListIngredients} handleSelect={this.handleMyPantrySelection} actions={myPantryListActions} emptyListMessage="This pantry is currently empty"/>
-                      </div>
+      <div className="public-pantry">
+        <div className="container">
+          <div className="mask d-flex align-items-center h-100">
+            <div className="container h-100">
+              <div className="row d-flex justify-content-center align-items-center h-100">
+                <div className="col-12 col-md-12 col-lg-12 col-xl-12">
+                  <div className="card" styles="border-radius: 15px;">
+                    <div className="card-body p-5">
+                      <PageTitle></PageTitle>
+                      <h1 className="mt-5 font-weight-light text-center">{this.props.username + "'s Pantry:"}</h1>
+                      <IngredientList ingredients={this.state.myPantryListIngredients} handleSelect={this.handleMyPantrySelection} actions={myPantryListActions} emptyListMessage="This pantry is currently empty"/>
                     </div>
                   </div>
                 </div>
@@ -79,7 +69,7 @@ class ViewOnlyPantry extends Component {
             </div>
           </div>
         </div>
-      </Expand>
+      </div>
     );
   }
 }
