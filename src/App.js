@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Link, BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Header, Footer, Home, About, Contact, Login, Register, TermsOfService, MyPantry, ShoppingList, SavedRecipes, SearchRecipes, Profile } from "./components";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import jwt_decode from "jwt-decode";
@@ -9,6 +9,7 @@ import MessagePopUp from "./components/MessagePopUp";
 import PublicPantry from "./components/PublicPantry";
 import PublicShoppingList from "./components/PublicShoppingList";
 import Heroku from "./components/Heroku";
+
 
 import { Provider } from "react-redux";
 import store from "./store";
@@ -69,7 +70,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.showHerokuServerMessage();
+    this.showHerokuServerMessage();/////// TEMP
 
     // Send GET request to Heroku server to make sure it is awake
     let responseReceived = false;
