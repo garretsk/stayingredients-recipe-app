@@ -3,7 +3,7 @@ import PageTitle from "./PageTitle";
 import IngredientList from "./IngredientList";
 import jwt_decode from "jwt-decode";
 import Expand from "react-expand-animated";
-import useParams from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 class ViewOnlyPantry extends Component {
   constructor(props) {
