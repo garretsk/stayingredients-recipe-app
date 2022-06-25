@@ -5,7 +5,7 @@ import PrivateRoute from "./components/private-route/PrivateRoute";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
-import MessagePopUp from "./MessagePopUp";
+import MessagePopUp from "./components/MessagePopUp";
 
 import { Provider } from "react-redux";
 import store from "./store";
