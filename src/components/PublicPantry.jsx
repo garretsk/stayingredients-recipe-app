@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 import PageTitle from "./PageTitle";
-import SearchField from "./SearchField";
 import IngredientList from "./IngredientList";
-import SocialMediaSharePopUp from "./SocialMediaSharePopUp";
-import validateSearchInput from "../utils/validateSearchInput";
 import jwt_decode from "jwt-decode";
 import Expand from "react-expand-animated";
+import useParams from "react-router-dom";
 
-export default class PublicPantry extends Component {
+class ViewOnlyPantry extends Component {
   constructor(props) {
     super(props);
 
@@ -40,7 +38,7 @@ export default class PublicPantry extends Component {
     const name = decoded.uname;
     console.log("getting pantry");
 
-    fetch("https://stayingredients-backend.herokuapp.com/api/users/getPantry/" + name)
+    fetch("https://stayingredients-backend.herokuapp.com/api/users/getPantry/" + this.props.username)
       .then(response => response.json())
       .then((res) => {
         console.log("PANTRY: " + res.userPantry);
@@ -82,7 +80,7 @@ export default class PublicPantry extends Component {
                       <div className="card-body p-5">
                         <PageTitle></PageTitle>
                         <h1 className="mt-5 font-weight-light text-center">User's Pantry:</h1>
-                        <IngredientList ingredients={this.state.myPantryListIngredients} handleSelect={this.handleMyPantrySelection} actions={myPantryListActions} emptyListMessage="This pantry is currently empty"/>
+                        <IngredientList ingredients={this.state.myPantryListIngredients} handleSelect={this.handleMyPantrySelection} actions={myPantryListActions} emptyListMessage={this.props.username + "'s pantry is currently empty"}/>
                       </div>
                     </div>
                   </div>
@@ -94,4 +92,12 @@ export default class PublicPantry extends Component {
       </Expand>
     );
   }
+}
+
+export default function PublicPantry() {
+  const { id } = useParams();
+
+  return(
+    <ViewOnlyPantry username={id}/>
+  );
 }

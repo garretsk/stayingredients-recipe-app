@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 import PageTitle from "./PageTitle";
-import SearchField from "./SearchField";
 import IngredientList from "./IngredientList";
-import SocialMediaSharePopUp from "./SocialMediaSharePopUp";
-import validateSearchInput from "../utils/validateSearchInput";
 import jwt_decode from "jwt-decode";
 import Expand from "react-expand-animated";
+import useParams from "react-router-dom";
 
-export default class PublicShoppingList extends Component {
+class ViewOnlyShoppingList extends Component {
   constructor(props) {
     super(props);
 
@@ -40,7 +38,7 @@ export default class PublicShoppingList extends Component {
     const name = decoded.uname;
     console.log("getting shopping list");
 
-    fetch("https://stayingredients-backend.herokuapp.com/api/users/getShoppingList/" + name)
+    fetch("https://stayingredients-backend.herokuapp.com/api/users/getShoppingList/" + this.props.username)
       .then(response => response.json())
       .then((res) => {
         console.log("SHOPPING LIST: " + res.userShoppingList);
@@ -82,7 +80,7 @@ export default class PublicShoppingList extends Component {
                       <div className="card-body p-5">
                         <PageTitle></PageTitle>
                         <h1 className="mt-5 font-weight-light text-center">User's Shopping List:</h1>
-                        <IngredientList ingredients={this.state.shoppingListIngredients} handleSelect={this.handleShoppingListSelection} actions={myShoppingListActions} emptyListMessage="This shopping list is currently empty"/>
+                        <IngredientList ingredients={this.state.shoppingListIngredients} handleSelect={this.handleShoppingListSelection} actions={myShoppingListActions} emptyListMessage={this.props.username + "'s pantry is currently empty"}/>
                       </div>
                     </div>
                   </div>
@@ -94,4 +92,12 @@ export default class PublicShoppingList extends Component {
       </Expand>
     );
   }
+}
+
+export default function PublicShoppingList() {
+  const { id } = useParams();
+
+  return(
+    <ViewOnlyShoppingList username={id}/>
+  );
 }
