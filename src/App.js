@@ -5,6 +5,7 @@ import PrivateRoute from "./components/private-route/PrivateRoute";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
+import MessagePopUp from "./MessagePopUp";
 
 import { Provider } from "react-redux";
 import store from "./store";
@@ -31,13 +32,40 @@ if (localStorage.jwtToken) {
 }
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    const HEROKU_SERVER_MESSAGE = "Our Heroku server is starting. StayInGredients was created as part of an undergraduate capstone. Due to budgetary contraints, we used Vercel to deploy our frontend and 'free dyno hours' from Heroku to deploy our backend. In order to save dyno hours, the dyno sleeps until it receives traffic, which wakes it up. It returns to sleep after a period of inactivity. While our server is starting, you may notice any operations that involve requests to the backend being delayed. Performance will return to normal levels after the server wakes.";
+    const SERVER_AWAKE_MESSAGE = "Our Heroku server is now up and running!";
+
+    this.state = {
+      herokuServerMessageVisable: false,
+      serverAwakeMessageVisable: false
+    };
+
+    this.showHerokuServerMessage = this.showHerokuServerMessage.bind(this);
+    this.removeHerokuServerMessage = this.removeHerokuServerMessage.bind(this);
+    this.showServerAwakeMessage = this.showServerAwakeMessage.bind(this);
+    this.removeServerAwakeMessage = this.removeServerAwakeMessage.bind(this);
+  }
+
+  showHerokuServerMessage() {
+    this.setState({herokuServerMessageVisable: true});
+  }
+
+  removeHerokuServerMessage() {
+    this.setState({herokuServerMessageVisable: false});
+  }
+
+  showServerAwakeMessage() {
+    this.setState({serverAwakeMessageVisable: true});
+  }
+
+  removeServerAwakeMessage() {
+    this.setState({serverAwakeMessageVisable: false});
+  }
 
   componentDidMount() {
-
-    window.alert("one");
-    setTimeout(() => {
-      window.alert("two");
-    }, 1000);
 
     // Send GET request to Heroku server to make sure it is awake
     let responseReceived = false;
@@ -46,7 +74,7 @@ class App extends Component {
     setTimeout(() => {
       if(!responseReceived) {
         alertSent = true;
-        window.alert("Our Heroku server is starting. StayInGredients was created as part of an undergraduate capstone. Due to budgetary contraints, we used Vercel to deploy our frontend and 'free dyno hours' from Heroku to deploy our backend. In order to save dyno hours, the dyno sleeps until it receives traffic, which wakes it up. It returns to sleep after a period of inactivity. While our server is starting, you may notice any operations that involve requests to the backend being delayed. Performance will return to normal levels after the server wakes.");
+        this.showHerokuServerMessage();
       }
     }, 3000);
 
@@ -57,7 +85,7 @@ class App extends Component {
         responseReceived = true;
         console.log("Server awake");
         if(alertSent) {
-          window.alert("Our Heroku server is now up and running!");
+          this.showServerAwakeMessage();
         }
       }
       else {
@@ -90,6 +118,8 @@ class App extends Component {
             </Switch>
             <Footer />
           </Router>
+          <MessagePopUp alert={this.HEROKU_SERVER_MESSAGE} handleClose={this.removeHerokuServerMessage}/>
+          <MessagePopUp alert={this.SERVER_AWAKE_MESSAGE} handleClose={this.removeServerAwakeMessage}/>
         </div>
       </Provider>
     );

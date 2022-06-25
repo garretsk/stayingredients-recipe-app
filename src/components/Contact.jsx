@@ -12,7 +12,7 @@ class Contact extends Component {
       message: "",
       contactFormSentPopUpVisable: false,
       contactFormSentPopUpAlert: ""
-    }
+    };
 
     this.handleFNameChange = this.handleFNameChange.bind(this);
     this.handleLNameChange = this.handleLNameChange.bind(this);
