@@ -10,7 +10,6 @@ class ViewOnlyShoppingList extends Component {
     super(props);
 
     this.state = {
-      currentUser: name,
       expand: false,
       shoppingListIngredients: []
     };
