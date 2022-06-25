@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 
-const TIMOUT = 5000;
-
 export default class MessagePopUp extends Component {
 
   componentDidMount() {
-    setTimeout(this.props.handleClose, TIMOUT);
+    setTimeout(this.props.handleClose, this.props.timeout);
   }
 
   render() {

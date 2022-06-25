@@ -31,12 +31,12 @@ if (localStorage.jwtToken) {
   // }
 }
 
-class App extends Component {
-  constructor(props) {
-    super(props);
+const HEROKU_SERVER_MESSAGE = "Our Heroku server is starting. StayInGredients was created as part of an undergraduate capstone. Due to budgetary contraints, we used Vercel to deploy our frontend and 'free dyno hours' from Heroku to deploy our backend. In order to save dyno hours, the dyno sleeps until it receives traffic, which wakes it up. It returns to sleep after a period of inactivity. While our server is starting, you may notice any operations that involve requests to the backend being delayed. Performance will return to normal levels after the server wakes.";
+const SERVER_AWAKE_MESSAGE = "Our Heroku server is now up and running!";
 
-    const HEROKU_SERVER_MESSAGE = "Our Heroku server is starting. StayInGredients was created as part of an undergraduate capstone. Due to budgetary contraints, we used Vercel to deploy our frontend and 'free dyno hours' from Heroku to deploy our backend. In order to save dyno hours, the dyno sleeps until it receives traffic, which wakes it up. It returns to sleep after a period of inactivity. While our server is starting, you may notice any operations that involve requests to the backend being delayed. Performance will return to normal levels after the server wakes.";
-    const SERVER_AWAKE_MESSAGE = "Our Heroku server is now up and running!";
+class App extends Component {
+    constructor(props) {
+    super(props);
 
     this.state = {
       herokuServerMessageVisable: false,
@@ -118,8 +118,8 @@ class App extends Component {
             </Switch>
             <Footer />
           </Router>
-          <MessagePopUp alert={this.HEROKU_SERVER_MESSAGE} handleClose={this.removeHerokuServerMessage}/>
-          <MessagePopUp alert={this.SERVER_AWAKE_MESSAGE} handleClose={this.removeServerAwakeMessage}/>
+          <MessagePopUp alert={this.HEROKU_SERVER_MESSAGE} handleClose={this.removeHerokuServerMessage} timeout={10000}/>
+          <MessagePopUp alert={this.SERVER_AWAKE_MESSAGE} handleClose={this.removeServerAwakeMessage} timeout={10000}/>
         </div>
       </Provider>
     );

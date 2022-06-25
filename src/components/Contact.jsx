@@ -114,7 +114,7 @@ class Contact extends Component {
   
                       </form>
                       {this.state.contactFormSentPopUpVisable &&
-                        <MessagePopUp alert={this.state.contactFormSentPopUpAlert} handleClose={this.removeContactFormPopUp}/>
+                        <MessagePopUp alert={this.state.contactFormSentPopUpAlert} handleClose={this.removeContactFormPopUp} timeout={5000}/>
                       }
                     </div>
                   </div>
