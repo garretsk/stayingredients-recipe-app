@@ -79,8 +79,8 @@ class ViewOnlyPantry extends Component {
                     <div className="card" styles="border-radius: 15px;">
                       <div className="card-body p-5">
                         <PageTitle></PageTitle>
-                        <h1 className="mt-5 font-weight-light text-center">User's Pantry:</h1>
-                        <IngredientList ingredients={this.state.myPantryListIngredients} handleSelect={this.handleMyPantrySelection} actions={myPantryListActions} emptyListMessage={this.props.username + "'s pantry is currently empty"}/>
+                        <h1 className="mt-5 font-weight-light text-center">{this.props.username + "'s Pantry:"}</h1>
+                        <IngredientList ingredients={this.state.myPantryListIngredients} handleSelect={this.handleMyPantrySelection} actions={myPantryListActions} emptyListMessage="This pantry is currently empty"/>
                       </div>
                     </div>
                   </div>

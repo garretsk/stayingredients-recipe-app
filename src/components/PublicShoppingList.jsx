@@ -79,8 +79,8 @@ class ViewOnlyShoppingList extends Component {
                     <div className="card" styles="border-radius: 15px;">
                       <div className="card-body p-5">
                         <PageTitle></PageTitle>
-                        <h1 className="mt-5 font-weight-light text-center">User's Shopping List:</h1>
-                        <IngredientList ingredients={this.state.shoppingListIngredients} handleSelect={this.handleShoppingListSelection} actions={myShoppingListActions} emptyListMessage={this.props.username + "'s pantry is currently empty"}/>
+                        <h1 className="mt-5 font-weight-light text-center">{this.props.username + "'s Shopping List:"}</h1>
+                        <IngredientList ingredients={this.state.shoppingListIngredients} handleSelect={this.handleShoppingListSelection} actions={myShoppingListActions} emptyListMessage="This pantry is currently empty"/>
                       </div>
                     </div>
                   </div>
@@ -96,6 +96,8 @@ class ViewOnlyShoppingList extends Component {
 
 export default function PublicShoppingList() {
   const { id } = useParams();
+
+  console.log(id);
 
   return(
     <ViewOnlyShoppingList username={id}/>
