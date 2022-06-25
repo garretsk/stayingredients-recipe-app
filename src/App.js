@@ -13,7 +13,6 @@ import Heroku from "./components/Heroku";
 import { Provider } from "react-redux";
 import store from "./store";
 import { get } from "mongoose";
-import Heroku from "./components/Heroku";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
