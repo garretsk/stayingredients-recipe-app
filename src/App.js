@@ -112,7 +112,7 @@ class App extends Component {
               <Route path="/terms-of-service" exact component={() => <TermsOfService />} />
               <PrivateRoute path="/my-pantry" exact component={() => <MyPantry />} />
               <PrivateRoute path="/shopping-list" exact component={() => <ShoppingList />} />
-              <Route path="/saved-recipes" exact component={() => <SavedRecipes />} />
+              <PrivateRoute path="/saved-recipes" exact component={() => <SavedRecipes />} />
               <Route path="/search-recipes" exact component={() => <SearchRecipes />} />
               <PrivateRoute path="/profile" exact component={() => <Profile />} />
             </Switch>
