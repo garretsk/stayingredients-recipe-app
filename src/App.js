@@ -118,8 +118,12 @@ class App extends Component {
             </Switch>
             <Footer />
           </Router>
-          <MessagePopUp alert={this.HEROKU_SERVER_MESSAGE} handleClose={this.removeHerokuServerMessage} timeout={10000}/>
-          <MessagePopUp alert={this.SERVER_AWAKE_MESSAGE} handleClose={this.removeServerAwakeMessage} timeout={10000}/>
+          {this.state.herokuServerMessageVisable && 
+            <MessagePopUp alert={this.HEROKU_SERVER_MESSAGE} handleClose={this.removeHerokuServerMessage} timeout={10000}/>
+          }
+          {this.state.serverAwakeMessageVisable &&
+            <MessagePopUp alert={this.SERVER_AWAKE_MESSAGE} handleClose={this.removeServerAwakeMessage} timeout={10000}/>
+          }
         </div>
       </Provider>
     );
