@@ -10,7 +10,6 @@ import PublicPantry from "./components/PublicPantry";
 import PublicShoppingList from "./components/PublicShoppingList";
 import Heroku from "./components/Heroku";
 
-import { Link, withRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store";
 import { get } from "mongoose";
