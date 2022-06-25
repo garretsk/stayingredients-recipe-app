@@ -9,12 +9,7 @@ class ViewOnlyPantry extends Component {
   constructor(props) {
     super(props);
 
-    const token = localStorage.jwtToken;
-    const decoded = jwt_decode(token);
-    const name = decoded.uname;
-
     this.state = {
-      currentUser: name,
       expand: false,
       myPantryListIngredients: [],
     };
@@ -33,11 +28,6 @@ class ViewOnlyPantry extends Component {
   }
 
   retrieveMyPantry() {
-    const token = localStorage.jwtToken;
-    const decoded = jwt_decode(token);
-    const name = decoded.uname;
-    console.log("getting pantry");
-
     fetch("https://stayingredients-backend.herokuapp.com/api/users/getPantry/" + this.props.username)
       .then(response => response.json())
       .then((res) => {

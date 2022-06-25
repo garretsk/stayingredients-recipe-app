@@ -28,8 +28,6 @@ class ViewOnlyShoppingList extends Component {
   }
 
   retrieveShoppingList() {
-    console.log("getting shopping list");
-
     fetch("https://stayingredients-backend.herokuapp.com/api/users/getShoppingList/" + this.props.username)
       .then(response => response.json())
       .then((res) => {
