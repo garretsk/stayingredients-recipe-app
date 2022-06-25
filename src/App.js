@@ -10,7 +10,7 @@ import PublicPantry from "./components/PublicPantry";
 import PublicShoppingList from "./components/PublicShoppingList";
 import Heroku from "./components/Heroku";
 
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store";
 import { get } from "mongoose";
@@ -35,7 +35,7 @@ if (localStorage.jwtToken) {
   // }
 }
 
-const HEROKU_SERVER_MESSAGE = <span>Our Heroku server is starting. Some features may be delayed until this is done. More info: </span>;
+const HEROKU_SERVER_MESSAGE = <span>Our Heroku server is starting. Some features may be delayed until this is done. More info: <Link className="nav-link" to="/heroku">Deploying StayInGredients with Heroku</Link></span>;
 const SERVER_AWAKE_MESSAGE = <span>Our Heroku server is now up and running!</span>;
 
 class App extends Component {
