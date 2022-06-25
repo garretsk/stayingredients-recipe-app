@@ -11,7 +11,7 @@ class Contact extends Component {
       email: "",
       message: "",
       contactFormSentPopUpVisable: false,
-      contactFormSentPopUpAlert: ""
+      contactFormSentPopUpAlert: <span></span>
     };
 
     this.handleFNameChange = this.handleFNameChange.bind(this);
@@ -64,9 +64,9 @@ class Contact extends Component {
         const resData = await res;
         console.log(resData);
         if (resData.status === "success") {
-          this.showContactFormPopUp("Message sent. We will get back to you as soon as possible.");
+          this.showContactFormPopUp(<span>Message sent. We will get back to you as soon as possible.</span>);
         } else if (resData.status === "fail") {
-          this.showContactFormPopUp("Message failed to send");
+          this.showContactFormPopUp(<span>Message failed to send</span>);
         }
       })
       .then(() => {
