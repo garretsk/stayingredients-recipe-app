@@ -97,7 +97,7 @@ class ViewOnlyShoppingList extends Component {
 export default function PublicShoppingList() {
   const { username } = useParams();
 
-  console.log(id);
+  console.log(username);
 
   return(
     <ViewOnlyShoppingList username={username}/>
