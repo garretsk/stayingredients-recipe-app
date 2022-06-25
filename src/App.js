@@ -34,7 +34,7 @@ if (localStorage.jwtToken) {
   // }
 }
 
-const HEROKU_SERVER_MESSAGE = <span>Our Heroku server is starting. Some features may be delayed until this is done.</span>;
+const HEROKU_SERVER_MESSAGE = <span>Our Heroku server is starting. Some features may be delayed until this is done. More info: <a href="https://stayingredients-recipe-app.vercel.app/heroku" target="_blank" rel="noopener noreferrer">Deploying StayInGredients with Heroku</a></span>;
 const SERVER_AWAKE_MESSAGE = <span>Our Heroku server is now up and running!</span>;
 
 class App extends Component {
