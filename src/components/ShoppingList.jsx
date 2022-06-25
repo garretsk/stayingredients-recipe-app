@@ -303,9 +303,9 @@ export default class ShoppingList extends Component {
     let ingredientSearchListActions = [];
     ingredientSearchListActions.push({id: 0, action: this.addToShoppingList, label: "Add to Shopping List"});
 
-    let myPantryListActions = [];
-    myPantryListActions.push({id: 0, action: this.markAsGot, label: "Check off Shopping List"});
-    myPantryListActions.push({id: 1, action: this.removeFromShoppingList, label: "Remove from Shopping List"});
+    let myShoppingListActions = [];
+    myShoppingListActions.push({id: 0, action: this.markAsGot, label: "Check off Shopping List"});
+    myShoppingListActions.push({id: 1, action: this.removeFromShoppingList, label: "Remove from Shopping List"});
 
     return (
       <Expand open={this.state.expand}>
@@ -325,7 +325,7 @@ export default class ShoppingList extends Component {
                         }
                         <br/>
                         <h1 className="mt-5 font-weight-light text-center">Shopping List:</h1>
-                        <IngredientList ingredients={this.state.shoppingListIngredients} handleSelect={this.handleShoppingListSelection} actions={myPantryListActions} emptyListMessage="Your shopping list is currently empty"/>
+                        <IngredientList ingredients={this.state.shoppingListIngredients} handleSelect={this.handleShoppingListSelection} actions={myShoppingListActions} emptyListMessage="Your shopping list is currently empty"/>
                         <button onClick={this.shareShoppingList} style={{display: "inline", color: "blue"}} className="btn form-inline justify-content-center align-items-center"><i className="fas fa-share fa-2x"></i><h5 style={{display: "inline"}}> Share your shopping list</h5></button>
                         {this.state.showSocialMediaShare &&
                           <SocialMediaSharePopUp handleClose={this.handleSocialMediaSharePopUpClose} url="https://stayingredients-recipe-app.vercel.app/shopping-list" quote="My StayInGredients Shopping List" hashtag="#StayInGredients"/>

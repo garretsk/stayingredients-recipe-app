@@ -6,6 +6,8 @@ import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 import MessagePopUp from "./components/MessagePopUp";
+import PublicPantry from "./components/PublicPantry";
+import PublicShoppingList from "./components/PublicShoppingList";
 
 import { Provider } from "react-redux";
 import store from "./store";
@@ -104,17 +106,19 @@ class App extends Component {
           <Router>
             <Header />
             <Switch>
-              <Route path="/" exact component={() => <Home />} />
-              <Route path="/about" exact component={() => <About />} />
-              <Route path="/contact" exact component={() => <Contact />} />
-              <Route path="/login" exact component={() => <Login />} />
-              <Route path="/register" exact component={() => <Register />} />
-              <Route path="/terms-of-service" exact component={() => <TermsOfService />} />
-              <PrivateRoute path="/my-pantry" exact component={() => <MyPantry />} />
-              <PrivateRoute path="/shopping-list" exact component={() => <ShoppingList />} />
-              <PrivateRoute path="/saved-recipes" exact component={() => <SavedRecipes />} />
-              <Route path="/search-recipes" exact component={() => <SearchRecipes />} />
-              <PrivateRoute path="/profile" exact component={() => <Profile />} />
+              <Route path="/" exact component={() => <Home/>} />
+              <Route path="/about" exact component={() => <About/>} />
+              <Route path="/contact" exact component={() => <Contact/>} />
+              <Route path="/login" exact component={() => <Login/>} />
+              <Route path="/register" exact component={() => <Register/>} />
+              <Route path="/terms-of-service" exact component={() => <TermsOfService/>} />
+              <PrivateRoute path="/my-pantry" exact component={() => <MyPantry/>} />
+              <PrivateRoute path="/shopping-list" exact component={() => <ShoppingList/>} />
+              <PrivateRoute path="/saved-recipes" exact component={() => <SavedRecipes/>} />
+              <Route path="/search-recipes" exact component={() => <SearchRecipes/>} />
+              <PrivateRoute path="/profile" exact component={() => <Profile/>} />
+              <Route path="/my-pantry/:user" exact component={() => <PublicPantry/>} />
+              <Route path="/shopping-list/:user" exact component={() => <PublicShoppingList/>} />
             </Switch>
             <Footer />
           </Router>
