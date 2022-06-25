@@ -9,10 +9,6 @@ class ViewOnlyShoppingList extends Component {
   constructor(props) {
     super(props);
 
-    const token = localStorage.jwtToken;
-    const decoded = jwt_decode(token);
-    const name = decoded.uname;
-
     this.state = {
       currentUser: name,
       expand: false,
@@ -33,9 +29,6 @@ class ViewOnlyShoppingList extends Component {
   }
 
   retrieveShoppingList() {
-    const token = localStorage.jwtToken;
-    const decoded = jwt_decode(token);
-    const name = decoded.uname;
     console.log("getting shopping list");
 
     fetch("https://stayingredients-backend.herokuapp.com/api/users/getShoppingList/" + this.props.username)
