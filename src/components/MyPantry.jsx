@@ -330,7 +330,7 @@ export default class MyPantry extends Component {
                         <IngredientList ingredients={this.state.myPantryListIngredients} handleSelect={this.handleMyPantrySelection} actions={myPantryListActions} emptyListMessage="Your pantry is currently empty"/>
                         <button onClick={this.shareMyPantry} style={{display: "inline", color: "blue"}} className="btn form-inline justify-content-center align-items-center"><i className="fas fa-share fa-2x"></i><h5 style={{display: "inline"}}> Share your pantry</h5></button>
                         {this.state.showSocialMediaShare &&
-                          <SocialMediaSharePopUp handleClose={this.handleSocialMediaSharePopUpClose} url={"https://stayingredients-recipe-app.vercel.app/public-pantry/"} quote="My StayInGredients Pantry" hashtag="#StayInGredients"/>
+                          <SocialMediaSharePopUp handleClose={this.handleSocialMediaSharePopUpClose} url={"https://stayingredients-recipe-app.vercel.app/public-pantry/" + this.state.currentUser} quote="My StayInGredients Pantry" hashtag="#StayInGredients"/>
                         }
                       </div>
                     </div>
