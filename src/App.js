@@ -69,7 +69,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.showHerokuServerMessage();/////// TEMP
 
     // Send GET request to Heroku server to make sure it is awake
     let responseReceived = false;
