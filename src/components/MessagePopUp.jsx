@@ -12,6 +12,7 @@ export default class MessagePopUp extends Component {
         <div className="sig-message-pop-up">
           <span className="sig-close-message-pop-up" onClick={this.props.handleClose}>&times;</span>
           <div>{this.props.alert}</div>
+          <div>More info: <Link className="nav-link" to="/heroku">Deploying StayInGredients with Heroku</Link></div>
         </div>
       </div>
     );
