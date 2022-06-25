@@ -95,9 +95,9 @@ class ViewOnlyPantry extends Component {
 }
 
 export default function PublicPantry() {
-  const { id } = useParams();
+  const { username } = useParams();
 
   return(
-    <ViewOnlyPantry username={id}/>
+    <ViewOnlyPantry username={username}/>
   );
 }

@@ -95,11 +95,11 @@ class ViewOnlyShoppingList extends Component {
 }
 
 export default function PublicShoppingList() {
-  const { id } = useParams();
+  const { username } = useParams();
 
   console.log(id);
 
   return(
-    <ViewOnlyShoppingList username={id}/>
+    <ViewOnlyShoppingList username={username}/>
   );
 }

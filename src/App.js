@@ -117,8 +117,8 @@ class App extends Component {
               <PrivateRoute path="/saved-recipes" exact component={() => <SavedRecipes/>} />
               <Route path="/search-recipes" exact component={() => <SearchRecipes/>} />
               <PrivateRoute path="/profile" exact component={() => <Profile/>} />
-              <Route path="/public-pantry/:user" exact component={() => <PublicPantry/>} />
-              <Route path="/public-shopping-list/:user" exact component={() => <PublicShoppingList/>} />
+              <Route path="/public-pantry/:username" exact component={() => <PublicPantry/>} />
+              <Route path="/public-shopping-list/:username" exact component={() => <PublicShoppingList/>} />
             </Switch>
             <Footer />
           </Router>
