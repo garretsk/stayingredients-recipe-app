@@ -52,13 +52,13 @@ class ViewOnlyPantry extends Component {
     return (
       <div className="public-pantry">
         <div className="container">
-                  <div className="card" styles="border-radius: 15px;">
-                    <div className="card-body p-5">
-                      <PageTitle></PageTitle>
-                      <h1 className="mt-5 font-weight-light text-center">{this.props.username + "'s Pantry:"}</h1>
-                      <IngredientList ingredients={this.state.myPantryListIngredients} handleSelect={this.handleMyPantrySelection} actions={myPantryListActions} emptyListMessage="This pantry is currently empty"/>
-                    </div>
-                  </div>
+          <div className="card" styles="border-radius: 15px;">
+            <div className="card-body p-5">
+              <PageTitle></PageTitle>
+              <h1 className="mt-5 font-weight-light text-center">{this.props.username + "'s Pantry:"}</h1>
+              <IngredientList ingredients={this.state.myPantryListIngredients} handleSelect={this.handleMyPantrySelection} actions={myPantryListActions} emptyListMessage="This pantry is currently empty"/>
+            </div>
+          </div>
         </div>
       </div>
     );

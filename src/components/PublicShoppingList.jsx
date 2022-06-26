@@ -52,19 +52,11 @@ class ViewOnlyShoppingList extends Component {
     return (
       <div className="public-shopping-list">
         <div className="container">
-          <div className="mask d-flex align-items-center h-100">
-            <div className="container h-100">
-              <div className="row d-flex justify-content-center align-items-center h-100">
-                <div className="col-12 col-md-12 col-lg-12 col-xl-12">
-                  <div className="card" styles="border-radius: 15px;">
-                    <div className="card-body p-5">
-                      <PageTitle></PageTitle>
-                      <h1 className="mt-5 font-weight-light text-center">{this.props.username + "'s Shopping List:"}</h1>
-                      <IngredientList ingredients={this.state.shoppingListIngredients} handleSelect={this.handleShoppingListSelection} actions={myShoppingListActions} emptyListMessage="This pantry is currently empty"/>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div className="card" styles="border-radius: 15px;">
+            <div className="card-body p-5">
+              <PageTitle></PageTitle>
+              <h1 className="mt-5 font-weight-light text-center">{this.props.username + "'s Shopping List:"}</h1>
+              <IngredientList ingredients={this.state.shoppingListIngredients} handleSelect={this.handleShoppingListSelection} actions={myShoppingListActions} emptyListMessage="This pantry is currently empty"/>
             </div>
           </div>
         </div>
