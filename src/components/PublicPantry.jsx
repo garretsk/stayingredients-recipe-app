@@ -52,10 +52,6 @@ class ViewOnlyPantry extends Component {
     return (
       <div className="public-pantry">
         <div className="container">
-          <div className="mask d-flex align-items-center h-100">
-            <div className="container h-100">
-              <div className="row d-flex justify-content-center align-items-center h-100">
-                <div className="col-12 col-md-12 col-lg-12 col-xl-12">
                   <div className="card" styles="border-radius: 15px;">
                     <div className="card-body p-5">
                       <PageTitle></PageTitle>
@@ -63,10 +59,6 @@ class ViewOnlyPantry extends Component {
                       <IngredientList ingredients={this.state.myPantryListIngredients} handleSelect={this.handleMyPantrySelection} actions={myPantryListActions} emptyListMessage="This pantry is currently empty"/>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     );
