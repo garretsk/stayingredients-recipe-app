@@ -43,7 +43,6 @@ class ViewOnlyShoppingList extends Component {
   }
 
   componentDidMount() {
-    this.expand();
     this.retrieveShoppingList();
   }
 
