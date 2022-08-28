@@ -1,7 +1,13 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "StayInGredients",
+  "name": "StayInGredients Recipe App",
   "icons": [
+    {
+      "src": "stayingredients_maskable.png",
+      "sizes": "243x243",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
     {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
