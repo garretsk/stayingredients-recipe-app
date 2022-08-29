@@ -80,8 +80,9 @@ function SearchRecipes() {
             'x-rapidapi-key': process.env.REACT_APP_SPOONACULAR_KEY
           }
         };
-        let url = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/ingredients/substitutes?ingredientName=" + ingredient.name;
-        await fetch(url, options)
+        const headers = { 'Content-Type': 'application/json' };
+        let url = "https://api.spoonacular.com/food/ingredients/substitutes?ingredientName=" + ingredient.name + "&apiKey=" + 'd3df972c0999400e9eda67baa65be1c7';
+        await fetch(url, headers)
         .then(response => response.json())
         .then(result => {
           if(result.status == "success") {
@@ -358,8 +359,9 @@ function changeToGrid(){
         'x-rapidapi-key': process.env.REACT_APP_SPOONACULAR_KEY
       }
     };
+    const headers = { 'Content-Type': 'application/json' };
     console.log(searchQuery);
-    var url = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?query=" + searchQuery
+    var url = "https://api.spoonacular.com/recipes/complexSearch?query=" + searchQuery
                 + "&includeIngredients=" + pantry
                 + "&fillIngredients=true&sort=min-missing-ingredients&ignorePantry=true"
                 + "&number=" + parseInt(maxResults)
@@ -370,13 +372,14 @@ function changeToGrid(){
                 + "&intolerances=" + intolerances
                 + "&minProtein=" + minProtein
                 + "&minCalories=" + calories[0] * CALORIE_SCALE
-                + "&maxCalories=" + calories[1] * CALORIE_SCALE;
+                + "&maxCalories=" + calories[1] * CALORIE_SCALE
+                + "&apiKey=" + 'd3df972c0999400e9eda67baa65be1c7';
 
     if(maxCookTime != MAX_COOK_TIME) {
       url += "&maxReadyTime=" + maxCookTime
     }
     console.log(url)
-    fetch(url, options)
+    fetch(url, headers)
       .then(response => response.json())
       .then(data => {
         console.log("PANTRY IS : " + pantry);
@@ -413,7 +416,8 @@ function getRandomRecipe (e) {
       'x-rapidapi-key': process.env.REACT_APP_SPOONACULAR_KEY
     }
   };
-  var url = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?"
+  const headers = { 'Content-Type': 'application/json' };
+  var url = "https://api.spoonacular.com/recipes/complexSearch?query="
               + "&includeIngredients=" + pantry
               + "&fillIngredients=true&sort=min-missing-ingredients&number=100&ignorePantry=true"
               + "&addRecipeInformation=true"
@@ -423,12 +427,13 @@ function getRandomRecipe (e) {
               + "&intolerances=" + intolerances
               + "&minProtein=" + minProtein
               + "&minCalories=" + calories[0] * CALORIE_SCALE
-              + "&maxCalories=" + calories[1] * CALORIE_SCALE;
+              + "&maxCalories=" + calories[1] * CALORIE_SCALE
+              + "&apiKey=" + 'd3df972c0999400e9eda67baa65be1c7';
 
   if(maxCookTime != MAX_COOK_TIME) {
     url += "&maxReadyTime=" + maxCookTime
   }
-  fetch(url, options)
+  fetch(url, headers)
     .then(response => response.json())
     .then(data => {
       setRecipes(prevRecipes => {

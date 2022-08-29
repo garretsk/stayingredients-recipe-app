@@ -58,15 +58,9 @@ export default class ShoppingList extends Component {
 
     if(validateSearchInput(ingredientQuery)) {
       // GET request using fetch with set headers
-      const options = { 
-        'method': 'GET',
-        'headers': {
-          'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
-          'x-rapidapi-key': process.env.REACT_APP_SPOONACULAR_KEY
-        }
-      };
-      const url = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/ingredients/autocomplete?query=" + ingredientQuery + "&number=10&limitLicense=true&ranking=1";
-      fetch(url, options)
+      const headers = { "Content-Type": "application/json" };
+      const url = "https://api.spoonacular.com/food/ingredients/autocomplete?query=" + ingredientQuery + "&number=10&limitLicense=true&ranking=1&apiKey=a79016b9efc14e8e83909c90a1173d99";
+      fetch(url, headers)
         .then(response => response.json())
         .then(data => {
           let tempSearchResultListIngredients = [];
