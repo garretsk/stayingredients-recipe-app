@@ -46,7 +46,7 @@
   "scripts": {
     "start": "react-scripts start",
     "dev": "concurrently \"cd server && nodemon server\" \"npm start\"",
-    "build": "webpack",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
