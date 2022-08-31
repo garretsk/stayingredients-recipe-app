@@ -1,0 +1,6 @@
+[{
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target" : { "namespace": "android_app", "package_name": "app.vercel.stayingredients_recipe_app.twa",
+                     "sha256_cert_fingerprints": ["30:D3:07:4D:BE:B1:7E:F7:DE:D7:E4:60:DE:6F:A7:85:63:A4:4F:89:DA:DD:3E:25:43:51:3B:13:51:59:6D:23"] }
+      }
+]
