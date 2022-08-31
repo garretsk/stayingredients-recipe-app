@@ -6,6 +6,7 @@ export { default as Contact } from "./Contact";
 export { default as Login } from "./Login";
 export { default as Register } from "./Register";
 export { default as TermsOfService } from "./TermsOfService";
+export { default as Privacy } from "./Privacy";
 export { default as MyPantry } from "./MyPantry";
 export { default as ShoppingList } from "./ShoppingList";
 export { default as SavedRecipes } from "./SavedRecipes";

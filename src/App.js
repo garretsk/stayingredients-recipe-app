@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Header, Footer, Home, About, Contact, Login, Register, TermsOfService, MyPantry, ShoppingList, SavedRecipes, SearchRecipes, Profile } from "./components";
+import { Header, Footer, Home, About, Contact, Login, Register, Privacy, TermsOfService, MyPantry, ShoppingList, SavedRecipes, SearchRecipes, Profile } from "./components";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
@@ -111,6 +111,7 @@ class App extends Component {
               <Route path="/contact" exact component={() => <Contact/>} />
               <Route path="/login" exact component={() => <Login/>} />
               <Route path="/register" exact component={() => <Register/>} />
+              <Route path="/privacy" exact component={() => <Privacy/>} />
               <Route path="/terms-of-service" exact component={() => <TermsOfService/>} />
               <PrivateRoute path="/my-pantry" exact component={() => <MyPantry/>} />
               <PrivateRoute path="/shopping-list" exact component={() => <ShoppingList/>} />

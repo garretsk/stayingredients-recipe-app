@@ -13,6 +13,7 @@ function Footer() {
         <ul className="navbar-nav ml-auto mb-2">
           <FooterNavigationElement page="About" path="/about"></FooterNavigationElement>
           <FooterNavigationElement page="Contact" path="/contact"></FooterNavigationElement>
+          <FooterNavigationElement page="Privacy" path="/privacy"></FooterNavigationElement>
           <FooterNavigationElement page="Terms of Service" path="/terms-of-service"></FooterNavigationElement>
         </ul>
         <BackToTop />
