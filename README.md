@@ -1,6 +1,12 @@
 # stayingredients-recipe-app
 This is the frontend application for StayInGredients, a recipe app that allows users to specify what ingredients they have available to them and then search for recipes that are possible with those ingredients.
 
+This client-side application is accessible online at: 'https://stayingredients-recipe-app.vercel.app'
+
+The application can also be downloaded from the Google Play Store as 'StayIngredients Recipe App' or installed as a PWA on mobile and desktop.
+
+Search 'StayInGredients Recipe App' from Google Play Store or go to: 'https://play.google.com/store/apps/details?id=app.vercel.stayingredients_recipe_app.twa'
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -73,4 +79,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-### This application is available through the web and also as a mobile or desktop PWA
+### This application is available through the web, as an Android app, and also as a mobile or desktop PWA
