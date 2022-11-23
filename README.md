@@ -1,3 +1,6 @@
+# stayingredients-recipe-app
+This is the frontend application for StayInGredients, a recipe app that allows users to specify what ingredients they have available to them and then search for recipes that are possible with those ingredients.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
