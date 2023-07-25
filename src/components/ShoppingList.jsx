@@ -192,7 +192,7 @@ export default class ShoppingList extends Component {
 
   markAsGot() {
     let addMPPath = "http://stayingredients-backend-env.eba-feujhudp.us-east-2.elasticbeanstalk.com/api/users/addPantry";
-    let removeSLPath = "https://stayingredients-backend.herokuapp.com/api/users/removeShoppingList";
+    let removeSLPath = "http://stayingredients-backend-env.eba-feujhudp.us-east-2.elasticbeanstalk.com/api/users/removeShoppingList";
     let tempSelectedIngredients = [];
     for(let i = 0; i < this.state.shoppingListIngredients.length; ++i) {
       if(this.state.shoppingListIngredients[i].isSelected) {
