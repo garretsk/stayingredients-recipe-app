@@ -45,7 +45,7 @@ class Profile extends Component {
     console.log(decoded);
     console.log(name);
 
-    fetch("https://stayingredients-backend.herokuapp.com/api/users/getUserInfo/" + name)
+    fetch("http://stayingredients-backend-env.eba-feujhudp.us-east-2.elasticbeanstalk.com/api/users/getUserInfo/" + name)
       .then(response => response.json())
       .then((res) => {
         console.log("USER_INFO: " + res);
