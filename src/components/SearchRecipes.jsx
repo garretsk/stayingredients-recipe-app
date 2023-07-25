@@ -23,7 +23,7 @@ function SearchRecipes() {
     const name = decoded.uname;
     console.log("getting pantry");
 
-    fetch("https://stayingredients-backend.herokuapp.com/api/users/getPantry/" + name)
+    fetch("http://stayingredients-backend-env.eba-feujhudp.us-east-2.elasticbeanstalk.com/api/users/getPantry/" + name)
       .then(response => response.json())
       .then((res) => {
         console.log("PANTRY: " + res.userPantry);
@@ -115,7 +115,7 @@ function SearchRecipes() {
     const decoded = jwt_decode(token);
     const uname = decoded.uname;
 
-    let path = "https://stayingredients-backend.herokuapp.com/api/users/addSavedRecipe";
+    let path = "http://stayingredients-backend-env.eba-feujhudp.us-east-2.elasticbeanstalk.com/api/users/addSavedRecipe";
     console.log("addToSavedRecipes");
     console.log("--->>>");
     console.log(name);
@@ -151,7 +151,7 @@ function SearchRecipes() {
     const decoded = jwt_decode(token);
     const uname = decoded.uname;
 
-    let path = "https://stayingredients-backend.herokuapp.com/api/users/removeSavedRecipe";
+    let path = "http://stayingredients-backend-env.eba-feujhudp.us-east-2.elasticbeanstalk.com/api/users/removeSavedRecipe";
     console.log("removeFromSavedRecipes");
     console.log("--->>>");
     console.log(name);
