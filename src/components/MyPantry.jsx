@@ -97,7 +97,7 @@ export default class MyPantry extends Component {
   }
 
   addToPantry() {
-    let path = "https://stayingredients-backend.herokuapp.com/api/users/addPantry";
+    let path = "http://stayingredients-backend-env.eba-feujhudp.us-east-2.elasticbeanstalk.com/api/users/addPantry";
     let tempSelectedIngredients = [];
     let tempSearchResultListIngredients = [];
     let newIndex = 0;
@@ -168,7 +168,7 @@ export default class MyPantry extends Component {
     const name = decoded.uname;
     console.log("getting pantry");
 
-    fetch("https://stayingredients-backend.herokuapp.com/api/users/getPantry/" + name)
+    fetch("http://stayingredients-backend-env.eba-feujhudp.us-east-2.elasticbeanstalk.com/api/users/getPantry/" + name)
       .then(response => response.json())
       .then((res) => {
         console.log("PANTRY: " + res.userPantry);
@@ -191,8 +191,8 @@ export default class MyPantry extends Component {
   }
 
   markDepleted() {
-    let addSLPath = "https://stayingredients-backend.herokuapp.com/api/users/addShoppingList";
-    let removeMPPath = "https://stayingredients-backend.herokuapp.com/api/users/removePantry";
+    let addSLPath = "http://stayingredients-backend-env.eba-feujhudp.us-east-2.elasticbeanstalk.com/api/users/addShoppingList";
+    let removeMPPath = "http://stayingredients-backend-env.eba-feujhudp.us-east-2.elasticbeanstalk.com/api/users/removePantry";
     let tempSelectedIngredients = [];
     for(let i = 0; i < this.state.myPantryListIngredients.length; ++i) {
       if(this.state.myPantryListIngredients[i].isSelected) {
@@ -246,7 +246,7 @@ export default class MyPantry extends Component {
   }
 
   removeFromPantry() {
-    let removeMPPath = "https://stayingredients-backend.herokuapp.com/api/users/removePantry";
+    let removeMPPath = "http://stayingredients-backend-env.eba-feujhudp.us-east-2.elasticbeanstalk.com/api/users/removePantry";
     let tempSelectedIngredients = [];
     for(let i = 0; i < this.state.myPantryListIngredients.length; ++i) {
       if(this.state.myPantryListIngredients[i].isSelected) {
