@@ -120,16 +120,16 @@ class App extends Component {
               <PrivateRoute path="/profile" exact component={() => <Profile/>} />
               <Route path="/public-pantry/:username" exact component={() => <PublicPantry/>} />
               <Route path="/public-shopping-list/:username" exact component={() => <PublicShoppingList/>} />
-              <Route path="/heroku" exact component={() => <Heroku/>} />
+              //<Route path="/heroku" exact component={() => <Heroku/>} />
             </Switch>
             <Footer />
           </Router>
-          {this.state.herokuServerMessageVisable && 
+          /*{this.state.herokuServerMessageVisable && 
             <MessagePopUp alert={HEROKU_SERVER_MESSAGE} handleClose={this.removeHerokuServerMessage} timeout={10000}/>
           }
           {this.state.serverAwakeMessageVisable &&
             <MessagePopUp alert={SERVER_AWAKE_MESSAGE} handleClose={this.removeServerAwakeMessage} timeout={10000}/>
-          }
+          }*/
         </div>
       </Provider>
     );
