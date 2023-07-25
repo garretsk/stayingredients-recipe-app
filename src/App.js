@@ -34,14 +34,14 @@ if (localStorage.jwtToken) {
   // }
 }
 
-//const HEROKU_SERVER_MESSAGE = <span>Our Heroku server is starting. Some features may be delayed until this is done. More info: <a href="https://stayingredients-recipe-app.vercel.app/heroku" target="_blank" rel="noopener noreferrer">Deploying StayInGredients with Heroku</a></span>;
-//const SERVER_AWAKE_MESSAGE = <span>Our Heroku server is now up and running!</span>;
+const HEROKU_SERVER_MESSAGE = <span>Our Heroku server is starting. Some features may be delayed until this is done. More info: <a href="https://stayingredients-recipe-app.vercel.app/heroku" target="_blank" rel="noopener noreferrer">Deploying StayInGredients with Heroku</a></span>;
+const SERVER_AWAKE_MESSAGE = <span>Our Heroku server is now up and running!</span>;
 
 class App extends Component {
     constructor(props) {
     super(props);
 
-    /*this.state = {
+    this.state = {
       herokuServerMessageVisable: false,
       serverAwakeMessageVisable: false
     };
@@ -49,10 +49,10 @@ class App extends Component {
     this.showHerokuServerMessage = this.showHerokuServerMessage.bind(this);
     this.removeHerokuServerMessage = this.removeHerokuServerMessage.bind(this);
     this.showServerAwakeMessage = this.showServerAwakeMessage.bind(this);
-    this.removeServerAwakeMessage = this.removeServerAwakeMessage.bind(this);*/
+    this.removeServerAwakeMessage = this.removeServerAwakeMessage.bind(this);
   }
 
-  /*showHerokuServerMessage() {
+  showHerokuServerMessage() {
     this.setState({herokuServerMessageVisable: true});
   }
 
@@ -73,7 +73,7 @@ class App extends Component {
     let responseReceived = false;
     let alertSent = false;
 
-    setTimeout(() => {
+    /*setTimeout(() => {
       if(!responseReceived) {
         alertSent = true;
         this.showHerokuServerMessage();
@@ -96,8 +96,8 @@ class App extends Component {
     })
     .catch(error => {
       window.alert(error);
-    });
-  }*/
+    });*/
+  }
 
   render() {
     return (
@@ -120,16 +120,16 @@ class App extends Component {
               <PrivateRoute path="/profile" exact component={() => <Profile/>} />
               <Route path="/public-pantry/:username" exact component={() => <PublicPantry/>} />
               <Route path="/public-shopping-list/:username" exact component={() => <PublicShoppingList/>} />
-              //<Route path="/heroku" exact component={() => <Heroku/>} />
+              <Route path="/heroku" exact component={() => <Heroku/>} />
             </Switch>
             <Footer />
           </Router>
-          /*{this.state.herokuServerMessageVisable && 
+          {this.state.herokuServerMessageVisable && 
             <MessagePopUp alert={HEROKU_SERVER_MESSAGE} handleClose={this.removeHerokuServerMessage} timeout={10000}/>
           }
           {this.state.serverAwakeMessageVisable &&
             <MessagePopUp alert={SERVER_AWAKE_MESSAGE} handleClose={this.removeServerAwakeMessage} timeout={10000}/>
-          }*/
+          }
         </div>
       </Provider>
     );
