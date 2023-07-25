@@ -8,7 +8,7 @@ import { setCurrentUser, logoutUser } from "./actions/authActions";
 import MessagePopUp from "./components/MessagePopUp";
 import PublicPantry from "./components/PublicPantry";
 import PublicShoppingList from "./components/PublicShoppingList";
-import Heroku from "./components/Heroku";
+//import Heroku from "./components/Heroku";
 
 import { Provider } from "react-redux";
 import store from "./store";
@@ -34,14 +34,14 @@ if (localStorage.jwtToken) {
   // }
 }
 
-const HEROKU_SERVER_MESSAGE = <span>Our Heroku server is starting. Some features may be delayed until this is done. More info: <a href="https://stayingredients-recipe-app.vercel.app/heroku" target="_blank" rel="noopener noreferrer">Deploying StayInGredients with Heroku</a></span>;
-const SERVER_AWAKE_MESSAGE = <span>Our Heroku server is now up and running!</span>;
+//const HEROKU_SERVER_MESSAGE = <span>Our Heroku server is starting. Some features may be delayed until this is done. More info: <a href="https://stayingredients-recipe-app.vercel.app/heroku" target="_blank" rel="noopener noreferrer">Deploying StayInGredients with Heroku</a></span>;
+//const SERVER_AWAKE_MESSAGE = <span>Our Heroku server is now up and running!</span>;
 
 class App extends Component {
     constructor(props) {
     super(props);
 
-    this.state = {
+    /*this.state = {
       herokuServerMessageVisable: false,
       serverAwakeMessageVisable: false
     };
@@ -49,10 +49,10 @@ class App extends Component {
     this.showHerokuServerMessage = this.showHerokuServerMessage.bind(this);
     this.removeHerokuServerMessage = this.removeHerokuServerMessage.bind(this);
     this.showServerAwakeMessage = this.showServerAwakeMessage.bind(this);
-    this.removeServerAwakeMessage = this.removeServerAwakeMessage.bind(this);
+    this.removeServerAwakeMessage = this.removeServerAwakeMessage.bind(this);*/
   }
 
-  showHerokuServerMessage() {
+  /*showHerokuServerMessage() {
     this.setState({herokuServerMessageVisable: true});
   }
 
@@ -97,7 +97,7 @@ class App extends Component {
     .catch(error => {
       window.alert(error);
     });
-  }
+  }*/
 
   render() {
     return (
