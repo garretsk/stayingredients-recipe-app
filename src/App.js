@@ -8,7 +8,7 @@ import { setCurrentUser, logoutUser } from "./actions/authActions";
 import MessagePopUp from "./components/MessagePopUp";
 import PublicPantry from "./components/PublicPantry";
 import PublicShoppingList from "./components/PublicShoppingList";
-//import Heroku from "./components/Heroku";
+import Heroku from "./components/Heroku";
 
 import { Provider } from "react-redux";
 import store from "./store";
