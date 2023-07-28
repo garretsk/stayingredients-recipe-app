@@ -11,7 +11,7 @@ import {
 // Register User
 export const registerUser = (userData, history) => dispatch => {
   axios
-    .post("http://stayingredients-backend-env.eba-feujhudp.us-east-2.elasticbeanstalk.com/api/users/register", userData)
+    .post("http://www.stayingredients-backend.us-east-2.elasticbeanstalk.com/api/users/register", userData)
     .then(res => history.push("/login")) // re-direct to login on successful register
     .catch(err =>
       dispatch({
@@ -24,7 +24,7 @@ export const registerUser = (userData, history) => dispatch => {
 
 export const addPantry = userData => dispatch => {
   axios
-    .post("http://stayingredients-backend-env.eba-feujhudp.us-east-2.elasticbeanstalk.com/api/users/addPantry", userData)
+    .post("http://www.stayingredients-backend.us-east-2.elasticbeanstalk.com/api/users/addPantry", userData)
     .then(res => {})
     .catch(err =>
       dispatch({
@@ -36,7 +36,7 @@ export const addPantry = userData => dispatch => {
 
 export const getPantry = userData => dispatch => {
   axios
-    .get("http://stayingredients-backend-env.eba-feujhudp.us-east-2.elasticbeanstalk.com/api/users/getPantry", userData)
+    .get("http://www.stayingredients-backend.us-east-2.elasticbeanstalk.com/api/users/getPantry", userData)
     .then(res => {})
     .catch(err =>
       dispatch({
@@ -49,7 +49,7 @@ export const getPantry = userData => dispatch => {
 // Login - get user token
 export const loginUser = userData => dispatch => {
   axios
-    .post("http://stayingredients-backend-env.eba-feujhudp.us-east-2.elasticbeanstalk.com/api/users/login", userData)
+    .post("http://www.stayingredients-backend.us-east-2.elasticbeanstalk.com/api/users/login", userData)
     .then(res => {
       // Save to localStorage
       // Set token to localStorage
@@ -72,7 +72,7 @@ export const loginUser = userData => dispatch => {
 
 export const updatePantry = pantryData => dispatch => {
   axios
-    .post("http://stayingredients-backend-env.eba-feujhudp.us-east-2.elasticbeanstalk.com/api/users/pantry", pantryData)
+    .post("http://www.stayingredients-backend.us-east-2.elasticbeanstalk.com/api/users/pantry", pantryData)
     .catch(err =>
       dispatch({
         type: GET_ERRORS,
