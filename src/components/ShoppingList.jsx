@@ -97,7 +97,7 @@ export default class ShoppingList extends Component {
   }
 
   addToShoppingList() {
-    let path = "http://stayingredients-backend-env.eba-feujhudp.us-east-2.elasticbeanstalk.com/api/users/addShoppingList";
+    let path = "http://www.stayingredients-backend.us-east-2.elasticbeanstalk.com/api/users/addShoppingList";
     let tempSelectedIngredients = [];
     let tempSearchResultListIngredients = [];
     let newIndex = 0;
@@ -168,7 +168,7 @@ export default class ShoppingList extends Component {
     const name = decoded.uname;
     console.log("getting shopping list");
 
-    fetch("http://stayingredients-backend-env.eba-feujhudp.us-east-2.elasticbeanstalk.com/api/users/getShoppingList/" + name)
+    fetch("http://www.stayingredients-backend.us-east-2.elasticbeanstalk.com/api/users/getShoppingList/" + name)
       .then(response => response.json())
       .then((res) => {
         console.log("SHOPPING LIST: " + res.userShoppingList);
@@ -191,8 +191,8 @@ export default class ShoppingList extends Component {
   }
 
   markAsGot() {
-    let addMPPath = "http://stayingredients-backend-env.eba-feujhudp.us-east-2.elasticbeanstalk.com/api/users/addPantry";
-    let removeSLPath = "http://stayingredients-backend-env.eba-feujhudp.us-east-2.elasticbeanstalk.com/api/users/removeShoppingList";
+    let addMPPath = "http://www.stayingredients-backend.us-east-2.elasticbeanstalk.com/api/users/addPantry";
+    let removeSLPath = "http://www.stayingredients-backend.us-east-2.elasticbeanstalk.com/api/users/removeShoppingList";
     let tempSelectedIngredients = [];
     for(let i = 0; i < this.state.shoppingListIngredients.length; ++i) {
       if(this.state.shoppingListIngredients[i].isSelected) {
@@ -246,7 +246,7 @@ export default class ShoppingList extends Component {
   }
 
   removeFromShoppingList() {
-    let removeSLPath = "http://stayingredients-backend-env.eba-feujhudp.us-east-2.elasticbeanstalk.com/api/users/removeShoppingList";
+    let removeSLPath = "http://www.stayingredients-backend.us-east-2.elasticbeanstalk.com/api/users/removeShoppingList";
     let tempSelectedIngredients = [];
     for(let i = 0; i < this.state.shoppingListIngredients.length; ++i) {
       if(this.state.shoppingListIngredients[i].isSelected) {
